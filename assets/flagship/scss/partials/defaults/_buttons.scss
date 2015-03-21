@@ -1,19 +1,23 @@
+%button-base {
+	border: 0;
+	border-radius: $base-border-radius;
+	cursor: pointer;
+	display: inline-block;
+	font-size: $base-button-font-size;
+	font-weight: 400;
+	padding: 16px 24px;
+	text-transform: uppercase;
+	width: auto;
+}
+
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
+	@extend %button-base;
 	background-color: $base-button-background-color;
-	border: 0;
-	border-radius: $base-border-radius;
 	color: $base-button-font-color;
-	cursor: pointer;
-	display: inline-block;
-	font-size: $secondary-font-size;
-	font-weight: 400;
-	padding: 16px 24px;
-	text-transform: uppercase;
-	width: auto;
 }
 
 button:hover,
