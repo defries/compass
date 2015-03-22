@@ -12,22 +12,7 @@ module.exports = {
 				],
 				dest: '',
 				filter: 'isFile'
-			}
-		]
-	},
-	vendorcss: {
-		files: [
-			{
-				expand: true,
-				flatten: true,
-				src: [],
-				dest: 'css/',
-				filter: 'isFile'
-			}
-		]
-	},
-	editorstyle: {
-		files: [
+			},
 			{
 				cwd: '<%= paths.tmp %>',
 				expand: true,
@@ -53,28 +38,20 @@ module.exports = {
 			}
 		]
 	},
-	hybridcore: {
+	php: {
 		files: [
 			{
 				cwd: '<%= paths.composer %>justintadlock/hybrid-core',
 				expand: true,
 				src: ['**/*'],
 				dest: '<%= paths.hybridCore %>'
-			}
-		]
-	},
-	flagshiplibrary: {
-		files: [
+			},
 			{
 				cwd: '<%= paths.composer %>flagshipwp/flagship-library',
 				expand: true,
 				src: ['**/*'],
 				dest: 'includes/vendor/flagship-library'
-			}
-		]
-	},
-	themehookalliance: {
-		files: [
+			},
 			{
 				cwd: '<%= paths.composer %>zamoose/themehookalliance',
 				expand: true,
@@ -92,11 +69,7 @@ module.exports = {
 				src: ['*', '!screenshot.png'],
 				dest: 'images',
 				filter: 'isFile'
-			}
-		]
-	},
-	screenshot: {
-		files: [
+			},
 			{
 				cwd: '<%= paths.tmp %>images',
 				expand: true,
