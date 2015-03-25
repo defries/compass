@@ -82,7 +82,7 @@ a[href^="mailto:"]::before {
 }
 
 a[href^="tel:"]::before {
-	content: $fli-speech-bubble;
+	content: $fli-iphone;
 }
 
 /* Menu Icon
@@ -101,19 +101,19 @@ a[href^="tel:"]::before {
 ---------------------- */
 .entry-author a::before,
 .chat-author cite::before {
-	content: $fli-head;
+	content: $fli-person;
 }
 
 .entry-published::before {
-	content: $fli-clock;
+	content: $fli-calendar;
 }
 
 .entry-comments-link::before {
-	content: $fli-speech-bubble;
+	content: $fli-chat;
 }
 
 .post-edit-link::before {
-	content: $fli-paper-clip;
+	content: $fli-edit;
 }
 
 .entry-permalink::before {
@@ -137,19 +137,19 @@ a[href^="tel:"]::before {
 }
 
 .format-aside .post-format-link::before {
-	content: $fli-paper;
+	content: $fli-aside;
 }
 
 .format-audio .post-format-link::before {
-	content: $fli-volume;
+	content: $fli-audio;
 }
 
 .format-chat .post-format-link::before {
-	content: $fli-speech-bubble;
+	content: $fli-chat;
 }
 
 .format-gallery .post-format-link::before {
-	content: $fli-layers;
+	content: $fli-gallery;
 }
 
 .image-sizes::before,
@@ -162,11 +162,11 @@ a[href^="tel:"]::before {
 }
 
 .format-quote .post-format-link::before {
-	content: $fli-heart;
+	content: $fli-quote;
 }
 
 .format-status .post-format-link::before {
-	content: $fli-check;
+	content: $fli-status;
 }
 
 .format-video .post-format-link::before {
@@ -176,7 +176,7 @@ a[href^="tel:"]::before {
 /* Author Box Icons
 ---------------------- */
 .social-gplus a::before {
-	content: $fli-google-plus;
+	content: $fli-googleplus;
 }
 
 .social-twitter a::before {
@@ -188,17 +188,17 @@ a[href^="tel:"]::before {
 }
 
 .social-rss a::before {
-	content: $fli-signal;
+	content: $fli-feed;
 }
 
 /* Comment Entry Icons
 ---------------------- */
 .comment-published::before {
-	content: $fli-clock;
+	content: $fli-time;
 }
 
 .comment-author::before {
-	content: $fli-head;
+	content: $fli-person;
 }
 
 .ping .comment-author::before {
@@ -206,7 +206,7 @@ a[href^="tel:"]::before {
 }
 
 .comment-edit-link::before {
-	content: $fli-paper-clip;
+	content: $fli-edit;
 }
 
 .comment-permalink::before {
@@ -237,7 +237,7 @@ a[href^="tel:"]::before {
 }
 
 .comment-respond label[for="author"]::before {
-	content: $fli-head;
+	content: $fli-person;
 }
 
 .comment-respond label[for="email"]::before {
@@ -249,20 +249,20 @@ a[href^="tel:"]::before {
 }
 
 .comment-respond label[for="comment"]::before {
-	content: $fli-speech-bubble;
+	content: $fli-chat;
 }
 
 /* Media Info Toggle Icon
 ---------------------- */
 .media-info-toggle::after {
-	content: $fli-toggle;
+	content: $fli-chevron-down;
 	color: $media-info-toggle-color;
 	padding-left: 5px;
 	vertical-align: top;
 }
 
 .media-info-toggle.active::after {
-	content: $fli-toggle;
+	content: $fli-chevron-up;
 }
 
 /* Media Player Icons
@@ -276,7 +276,7 @@ a[href^="tel:"]::before {
 }
 
 .mejs-fullscreen-button button::after {
-	content: $fli-maximize;
+	content: $fli-plus;
 }
 
 .mejs-play button::after {
@@ -288,32 +288,5 @@ a[href^="tel:"]::before {
 }
 
 .mejs-volume-button button::after {
-	content: $fli-volume;
-}
-
-/* Media Playlist Icons
----------------------- */
-.wp-playlist-playing .wp-playlist-caption::before {
-	content: $fli-speech-bubble;
-}
-
-.wp-playlist-current-item .wp-playlist-item-title::before {
-	content: $fli-ribbon;
-}
-
-.wp-playlist-current-item .wp-playlist-item-album::before {
-	content: $fli-disc;
-}
-
-.wp-playlist-current-item .wp-playlist-item-artist::before {
-	content: $fli-head;
-}
-
-.wp-playlist-playing .wp-playlist-caption::before,
-.wp-playlist-item-meta::before {
-	padding-bottom: 2px;
-}
-
-.wp-playlist-item-meta::before {
-	padding-right: 3px;
+	content: $fli-volume-on;
 }
