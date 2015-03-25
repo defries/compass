@@ -73,7 +73,7 @@
 /*
 HTML5 Reset
 ----------------------------------------------------------------------------- */
-@import "../../bower/wp-normalize/wp-normalize";
+@import "../../bower/scss/wp-normalize";
 
 
 /*
@@ -85,7 +85,9 @@ Defaults
 /*
 Structure and Layout
 ----------------------------------------------------------------------------- */
-@import "partials/base-layout";
+@import "partials/layout-base";
+@import "partials/layout-grids";
+
 
 /*
 Flagicons
