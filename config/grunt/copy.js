@@ -3,9 +3,9 @@ module.exports = {
 	css: {
 		files: [
 			{
-				cwd: '<%= paths.tmp %>',
 				expand: true,
 				flatten: true,
+				cwd: '<%= paths.tmp %>',
 				src: [
 					'style*.css',
 					'style*.map'
@@ -14,9 +14,9 @@ module.exports = {
 				filter: 'isFile'
 			},
 			{
-				cwd: '<%= paths.tmp %>',
 				expand: true,
 				flatten: true,
+				cwd: '<%= paths.tmp %>',
 				src: [
 					'editor-style*.css',
 					'editor-style*.map'
@@ -41,20 +41,20 @@ module.exports = {
 	php: {
 		files: [
 			{
-				cwd: '<%= paths.composer %>justintadlock/hybrid-core',
 				expand: true,
+				cwd: '<%= paths.composer %>justintadlock/hybrid-core',
 				src: ['**/*'],
 				dest: '<%= paths.hybridCore %>'
 			},
 			{
-				cwd: '<%= paths.composer %>flagshipwp/flagship-library',
 				expand: true,
+				cwd: '<%= paths.composer %>flagshipwp/flagship-library',
 				src: ['**/*'],
 				dest: 'includes/vendor/flagship-library'
 			},
 			{
-				cwd: '<%= paths.composer %>zamoose/themehookalliance',
 				expand: true,
+				cwd: '<%= paths.composer %>zamoose/themehookalliance',
 				src: ['tha-theme-hooks.php'],
 				dest: 'includes/vendor/'
 			}
@@ -63,17 +63,17 @@ module.exports = {
 	images: {
 		files: [
 			{
-				cwd: '<%= paths.tmp %>images',
 				expand: true,
 				flatten: true,
+				cwd: '<%= paths.tmp %>images',
 				src: ['*', '!screenshot.png'],
 				dest: 'images',
 				filter: 'isFile'
 			},
 			{
-				cwd: '<%= paths.tmp %>images',
 				expand: true,
 				flatten: true,
+				cwd: '<%= paths.tmp %>images',
 				src: ['screenshot.png'],
 				dest: '',
 				filter: 'isFile'
@@ -83,11 +83,51 @@ module.exports = {
 	languages: {
 		files: [
 			{
-				cwd: '<%= paths.assets %><%= paths.languages %>',
 				expand: true,
+				cwd: '<%= paths.assets %><%= paths.languages %>',
 				src: ['*.po'],
 				dest: '<%= paths.theme%><%= paths.languages %>',
 				filter: 'isFile'
+			}
+		]
+	},
+	bowercss: {
+		files: [
+			{
+				expand: true,
+				cwd: 'bower_components/wp-normalize.scss/',
+				src: ['_wp-normalize.scss'],
+				dest: '<%= paths.bower%>scss/'
+			}
+		]
+	},
+	bowerjs: {
+		files: [
+			{
+				expand: true,
+				flatten: true,
+				cwd: 'bower_components/',
+				src: [
+					'fitvids/jquery.fitvids.js',
+					'accessible-menu/dist/jquery.accessible-menu.js',
+					'sidr/jquery.sidr.min.js'
+				],
+				dest: '<%= paths.bower%>js/concat'
+			}
+		]
+	},
+	bowerfonts: {
+		files: [
+			{
+				expand: true,
+				flatten: true,
+				cwd: 'bower_components/themicons/src/',
+				src: ['**/*'],
+				dest: '<%= paths.bower%>icons/webfont',
+				rename: function( dest, src ) {
+					'use strict';
+					return dest + '/' + src.replace( 'themicons_', '' );
+				}
 			}
 		]
 	}
