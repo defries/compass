@@ -209,10 +209,6 @@ a[href^="tel:"]::before {
 	content: $fli-edit;
 }
 
-.comment-permalink::before {
-	content: $fli-link;
-}
-
 /* Comment Reply Icons
 ---------------------- */
 .comment-reply-title::before {

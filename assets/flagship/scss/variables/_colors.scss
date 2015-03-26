@@ -120,7 +120,7 @@ $gallery-caption-font-color:        $white;
 
 //* Flagship Colors
 //------------------------------------------------------------------------------
-$intro-paragraph-border-color: $light-fog;
+$intro-paragraph-border-color:     $light-fog;
 $author-box-background-color:      $white;
 $author-box-border-color:          $base-border-color;
 
@@ -134,8 +134,10 @@ $media-player-unmute-button-color:  $dark-gray;
 //------------------------------------------------------------------------------
 $comments-background-color:                  $white;
 $comments-font-color:                        $base-font-color;
-$comment-background-color:                   lighten($light-fog, 3);
+$comment-background-color:                   $white;
 $comment-border-color:                       $base-border-color;
+$comment-heder-background-color:             $light-fog;
+$comment-author-heder-background-color:      lighten($seafoam, 50);
 $comment-meta-link-color:                    $entry-meta-link-color;
 $comment-meta-link-hover-color:              $entry-meta-link-hover-color;
 $comment-meta-link-border-color:             $entry-meta-link-border-color;

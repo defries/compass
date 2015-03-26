@@ -15,7 +15,8 @@
 
 	<?php echo get_avatar( $comment, 48 ); ?>
 
-	<article>
+	<article class="comment-container">
+
 		<header class="comment-meta">
 			<cite <?php hybrid_attr( 'comment-author' ); ?>><?php comment_author_link(); ?></cite>
 			<a <?php hybrid_attr( 'comment-permalink' ); ?>>
@@ -35,8 +36,12 @@
 			<?php comment_text(); ?>
 		</div><!-- .comment-content -->
 
-		<footer class="comment-meta">
-			<?php hybrid_comment_reply_link(); ?>
-		</footer><!-- .comment-meta -->
+		<?php if ( hybrid_get_comment_reply_link() ) : ?>
+
+			<footer class="comment-meta">
+				<?php hybrid_comment_reply_link() ?>
+			</footer><!-- .comment-meta -->
+
+		<?php endif; ?>
 
 	</article>
