@@ -59,11 +59,13 @@ module.exports = {
 					'!<%= paths.composer %>**/*',
 					'!**/*.{png,ico,jpg,gif}',
 					'!node_modules/**',
+					'!bower_components/**',
 					'!.sass-cache/**',
 					'!dist/**',
 					'!logs/**',
 					'!tmp/**',
 					'!*.sublime*',
+					'!.idea/**',
 					'!.DS_Store'
 				]
 			}
