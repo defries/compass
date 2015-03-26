@@ -118,7 +118,6 @@
 	}
 
 	li > a {
-		color: $menu-header-color;
 		padding: 33px 15px;
 
 		@include media($large-screen-up) {

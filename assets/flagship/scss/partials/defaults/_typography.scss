@@ -61,8 +61,7 @@ hr {
 }
 
 pre {
-	background: $base-background-color;
-	border: 1px solid darken($base-border-color, 5);
+	background: $pre-background-color;
 	color: $base-heading-color;
 	font-family: $monospace;
 	font-size: $secondary-font-size;
