@@ -40,14 +40,16 @@
 	margin: 0.205em 0.153em 0 0;
 }
 
-.pull-quote {
-	max-width: 60%;
+@include media($small-screen-up) {
+	.pull-quote {
+		max-width: 60%;
 
-	&.alignright {
-		border-left: 0;
-		border-right: 7px solid $blockquote-border-color;
-		margin: 30px 0 30px 5%;
-		padding: 0 5% 0 0;
+		&.alignright {
+			border-left: 0;
+			border-right: 7px solid $blockquote-border-color;
+			margin: 30px 0 30px 5%;
+			padding: 0 5% 0 0;
+		}
 	}
 }
 
