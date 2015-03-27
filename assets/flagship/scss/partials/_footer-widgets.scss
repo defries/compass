@@ -1,6 +1,7 @@
 .footer-widgets {
 	background-color: $footer-widgets-background-color;
-	clear: both;
+	border-top: 1px solid $footer-widgets-border-color;
+	border-bottom: 1px solid $footer-widgets-border-color;
 	color: $footer-widgets-font-color;
 	padding-bottom: 10px;
 	padding-top: 40px;
@@ -43,11 +44,11 @@
 	.button:hover,
 	.button:focus,
 	input[type="button"]:hover,
-	input[type="button"]:hover,
+	input[type="button"]:focus,
 	input[type="submit"]:hover,
-	input[type="submit"]:hover,
+	input[type="submit"]:focus,
 	input[type="reset"]:hover,
-	input[type="reset"]:hover {
+	input[type="reset"]:focus {
 		background-color: $footer-widgets-button-background-hover-color;
 		color: $footer-widgets-button-font-hover-color;
 	}
@@ -80,7 +81,6 @@
 @include media($medium-screen-up) {
 	.footer-widgets-3 {
 		@include omega();
-		clear: right;
 	}
 
 	.footer-widgets-1,

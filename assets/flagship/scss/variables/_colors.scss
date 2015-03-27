@@ -164,13 +164,12 @@ $widget-link-color:       $medium-gray;
 
 //* Footer Widgets Colors
 //------------------------------------------------------------------------------
-$footer-widgets-background-color:              $dark-gray;
-$footer-widgets-font-color:                    $light-fog;
-$footer-widgets-heading-color:                 $white;
-$footer-widgets-link-color:                    $medium-fog;
-$footer-widgets-link-hover-color:              $base-link-color;
-$footer-widgets-link-border-color:             $base-link-color;
-$footer-widgets-border-color:                  $off-black;
+$footer-widgets-background-color:              $light-fog;
+$footer-widgets-font-color:                    $base-font-color;
+$footer-widgets-heading-color:                 $base-heading-color;
+$footer-widgets-link-color:                    $medium-gray;
+$footer-widgets-link-hover-color:              $base-link-hover-color;
+$footer-widgets-border-color:                  $base-border-color;
 $footer-widgets-button-background-color:       $base-button-background-color;
 $footer-widgets-button-font-color:             $base-button-font-color;
 $footer-widgets-button-background-hover-color: $base-button-background-hover-color;
