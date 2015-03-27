@@ -180,15 +180,14 @@
 --------------------------------------------- */
 
 .menu-button {
-	@include transition (all 0.2s ease-in-out);
-	display: block;
-	float: right;
-	margin: 17px 0 0;
-	padding: 8px 12px 10px;
-	color: $menu-button-link-color;
 	background: $menu-button-background-color;
 	border-radius: $base-border-radius;
+	color: $menu-button-link-color;
 	cursor: pointer;
+	display: block;
+	float: right;
+	margin: 20px 0 0;
+	padding: 0;
 
 	@include media($medium-screen-up) {
 		display: none;
@@ -197,7 +196,8 @@
 	&:hover,
 	&:focus,
 	&:active {
-		background: lighten($menu-button-background-color, 5%);
+		background: $menu-button-background-color-hover;
+		color: $menu-button-color-hover;
 
 		@include media($medium-screen-up) {
 			display: none;
@@ -205,7 +205,7 @@
 	}
 
 	&::before {
-		font-size: 26px;
+		font-size: 42px;
 	}
 }
 
@@ -232,6 +232,10 @@
 		left: -260px;
 		/* @noflip */
 		right: auto;
+	}
+
+	.wrap {
+		padding: 0;
 	}
 
 	.nav-menu {

@@ -3,7 +3,7 @@
 
 .entry {
 	margin-bottom: 30px;
-	padding: 20px;
+	padding: 0;
 	position: relative;
 
 	@include media($small-screen-up) {
@@ -13,7 +13,19 @@
 
 .content .entry {
 	background-color: $entry-background-color;
-	border: 1px solid $entry-border-color;
+
+	@include media($small-screen-up) {
+		border: 1px solid $entry-border-color;
+	}
+}
+
+.plural .content .entry {
+	border-bottom: 1px solid $entry-border-color;
+
+	&:last-of-type {
+		border: 0;
+		margin: 0;
+	}
 }
 
 .entry-title {
@@ -194,7 +206,7 @@
 .featured-media {
 	background: $featured-media-background-color;
 	display: block;
-	margin: -20px -20px 26px;
+	margin: 0 0 26px;
 	overflow: hidden;
 
 	@include media($small-screen-up) {

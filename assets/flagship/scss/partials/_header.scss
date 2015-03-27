@@ -11,7 +11,13 @@
 	}
 
 	> .wrap {
-		padding: 20px 0;
+		padding-left: 0;
+		padding-right: 0;
+
+		@include media($small-screen-up) {
+			padding-bottom: 20px;
+			padding-top: 20px;
+		}
 	}
 }
 

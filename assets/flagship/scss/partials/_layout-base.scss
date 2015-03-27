@@ -7,9 +7,13 @@
 
 .site-inner {
 	clear: both;
-	padding-top: 30px;
+	padding-top: 5%;
 	word-wrap: break-word;
 	word-break: normal;
+
+	@include media($smaller-screen-up) {
+		padding-top: 30px;
+	}
 }
 
 .site-inner,

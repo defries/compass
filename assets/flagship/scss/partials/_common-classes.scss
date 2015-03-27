@@ -74,16 +74,17 @@
 
 .avatar {
 	border-radius: 100%;
-	float: left;
+	display: block;
 }
 
-.alignleft .avatar,
-.author-box .avatar {
-	margin-right: 24px;
-}
+@include media($smaller-screen-up) {
+	.alignleft .avatar {
+		margin-right: 24px;
+	}
 
-.format-status .avatar {
-	margin-right: 20px;
+	.format-status .avatar {
+		margin-right: 20px;
+	}
 }
 
 /* WordPress

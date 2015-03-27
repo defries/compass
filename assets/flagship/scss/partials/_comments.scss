@@ -17,7 +17,17 @@
 
 .comments-number {
 	margin-bottom: 30px;
-	text-align: right;
+	text-align: center;
+
+	@include media($small-screen-up) {
+		text-align: right;
+	}
+}
+
+.comment-container {
+	background-color: $comment-background-color;
+	border: 1px solid $comment-border-color;
+	margin-bottom: 20px;
 }
 
 .comment {
@@ -28,7 +38,7 @@
 	}
 
 	header {
-		background-color: $comment-heder-background-color;
+		background-color: $comment-header-background-color;
 		border-bottom: 1px solid $comment-border-color;
 		clear: both;
 		font-size: $secondary-font-size;
@@ -37,29 +47,55 @@
 
 		&::before,
 		&::after {
-			position: absolute;
-			top: 11px;
-			left: -16px;
-			right: 100%;
-			width: 0;
-			height: 0;
-			display: block;
-			content: " ";
 			border-color: transparent;
-			border-style: solid solid outset;
+			border-style: solid outset solid;
+			content: " ";
+			display: block;
+			height: 0;
+			left: 50%;
+			margin-left: -8px;
 			pointer-events: none;
+			position: absolute;
+			right: 50%;
+			top: -16px;
+			width: 0;
+
+			@include media($smaller-screen-up) {
+				border-style: solid solid outset;
+				margin: 0;
+				left: -16px;
+				right: 100%;
+				left: -16px;
+				top: 11px;
+			}
 		}
 
 		&::before {
-			border-right-color: $comment-border-color;
+			border-right-color: transparent;
+			border-bottom-color: $comment-border-color;
 			border-width: 8px;
+
+			@include media($smaller-screen-up) {
+				border-right-color: $comment-border-color;
+				border-bottom-color: transparent;
+			}
 		}
 
 		&::after {
+			border-right-color: transparent;
+			border-bottom-color: $comment-header-background-color;
 			border-width: 7px;
-			border-right-color: $comment-heder-background-color;
-			margin-top: 1px;
-			margin-left: 2px;
+			margin-bottom: 0;
+			margin-left: -7px;
+			top: -14px;
+
+			@include media($smaller-screen-up) {
+				border-right-color: $comment-header-background-color;
+				border-bottom-color: transparent;
+				margin-top: 1px;
+				margin-left: 2px;
+				top: 11px;
+			}
 		}
 
 		cite {
@@ -72,9 +108,7 @@
 	}
 
 	.avatar {
-		display: block;
-		float: none;
-		margin: 0 auto 24px;
+		margin: 0 auto 15px;
 
 		@include media($smaller-screen-up) {
 			position: absolute;
@@ -85,9 +119,13 @@
 
 	.comment {
 		border: 0;
-		margin-left: -30px;
+		margin-left: 5px;
 		margin-top: 20px;
 		padding-bottom: 0;
+
+		@include media($smaller-screen-up) {
+			margin-left: -30px;
+		}
 	}
 
 	.comment:last-child {
@@ -102,18 +140,18 @@
 
 .bypostauthor {
 	header {
-		background-color: $comment-author-heder-background-color;
+		background-color: $comment-author-header-background-color;
 
 		&::after {
-			border-right-color: $comment-author-heder-background-color;
+			border-right-color: transparent;
+			border-bottom-color: $comment-author-header-background-color;
+
+			@include media($smaller-screen-up) {
+				border-right-color: $comment-author-header-background-color;
+				border-bottom-color: transparent;
+			}
 		}
 	}
-}
-
-.comment-container {
-	background-color: $comment-background-color;
-	border: 1px solid $comment-border-color;
-	margin-bottom: 20px;
 }
 
 .pingback,
@@ -216,8 +254,21 @@
 	}
 }
 
-.comment-respond label {
-	display: block;
+.comment-respond {
+
+	label {
+		display: block;
+	}
+
+	.submit {
+		display: block;
+		width: 100%;
+
+		@include media($small-screen-up) {
+			display: inline-block;
+			width: auto;
+		}
+	}
 }
 
 .entry-pings .reply {
