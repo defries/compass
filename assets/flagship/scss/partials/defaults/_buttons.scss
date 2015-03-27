@@ -6,8 +6,20 @@
 	font-size: $base-button-font-size;
 	font-weight: 400;
 	padding: 16px 24px;
+	text-align: center;
 	text-transform: uppercase;
 	width: auto;
+}
+
+%cta-button-style {
+	background-color: $cta-button-background-color;
+	color: $cta-button-font-color;
+
+	&:hover,
+	&:focus {
+		background-color: $cta-button-background-hover-color;
+		color: $cta-button-font-hover-color;
+	}
 }
 
 button,
@@ -32,10 +44,23 @@ input[type="submit"]:focus,
 .button:focus {
 	background-color: $base-button-background-hover-color;
 	color: $base-button-font-hover-color;
-	display: inline-block;
 }
 
 .entry-content .button:hover,
 .entry-content .button:focus {
 	color: $base-button-font-hover-color;
+}
+
+.block-button,
+.block.button {
+	display: block;
+}
+
+.cta.button {
+	@extend %cta-button-style;
+}
+
+.entry-content .cta.button:hover,
+.entry-content .cta.button:focus {
+	color: $cta-button-font-hover-color;
 }

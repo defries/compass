@@ -39,6 +39,10 @@ $base-button-background-color:       $off-black;
 $base-button-background-hover-color: lighten($base-button-background-color, 10);
 $base-button-font-color:             $white;
 $base-button-font-hover-color:       $white;
+$cta-button-background-color:        $seafoam;
+$cta-button-background-hover-color:  lighten($cta-button-background-color, 10);
+$cta-button-font-color:              $white;
+$cta-button-font-hover-color:        $white;
 
 // Form Colors
 //------------------------------------------------------------------------------
