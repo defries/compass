@@ -21,8 +21,6 @@
 
 		<?php tha_content_top(); ?>
 
-		<?php hybrid_get_menu( 'breadcrumbs' ); ?>
-
 		<?php if ( have_posts() ) : ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
