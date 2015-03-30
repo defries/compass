@@ -139,11 +139,7 @@
 	background-color: $comment-background-color;
 	border: 1px solid $comment-border-color;
 	margin-bottom: 20px;
-	padding: 0;
-
-	@include media($small-screen-up) {
-		padding: 30px 30px 15px;
-	}
+	padding: 10px 20px;
 }
 
 .comment-meta {
