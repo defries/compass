@@ -1,10 +1,8 @@
 .site-footer {
 	background-color: $footer-background-color;
 	color: $footer-font-color;
-	font-size: $footer-font-size;
-	line-height: $heading-line-height;
-	padding: 40px 0;
 	text-align: center;
+	padding: $base-padding 0;
 
 	p {
 		margin-bottom: 0;

@@ -4,13 +4,13 @@
 .author-box {
 	background: $author-box-background-color;
 	border: 1px solid $author-box-border-color;
-	margin-bottom: 30px;
-	padding: 20px;
+	margin-bottom: $base-margin;
+	padding: $author-box-padding-small;
 	text-align: center;
 
 	@include media($small-screen-up) {
-		padding: 40px;
 		text-align: left;
+		padding: $author-box-padding;
 	}
 
 	p:last-child {
@@ -18,18 +18,17 @@
 	}
 
 	.avatar {
-		margin: 0 auto;
+		margin: 0 auto $content-margin;
 
 		@include media($small-screen-up) {
 			float: left;
-			margin-bottom: 20px;
-			margin-right: 24px;
+			margin-right: $content-margin;
 		}
 	}
 
 	.social-icons {
 		display: block;
-		padding-top: 26px;
+		margin-top: $content-margin;
 
 		li {
 			display: inline-block;
@@ -45,7 +44,7 @@
 /* Typography Formats
 --------------------------------------------- */
 
-.dropcap {
+.dropcap::first-letter {
 	float: left;
 	font-size: 300%;
 	line-height: 0.5;
@@ -59,7 +58,7 @@
 		&.alignright {
 			border-left: 0;
 			border-right: 7px solid $blockquote-border-color;
-			margin: 30px 0 30px 5%;
+			margin: $base-margin 0 $base-margin 5%;
 			padding: 0 5% 0 0;
 		}
 	}

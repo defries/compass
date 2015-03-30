@@ -9,20 +9,18 @@ input[type="search"] {
 /* Float Clearing
 --------------------------------------------- */
 
-.author-box:after,
-.clearfix:after,
-.entry:after,
-.entry-content:after,
-.site-footer:after,
-.footer-widgets:after,
-.site-header:after,
-.pagination:after,
-.site-container:after,
-.site-inner:after,
-.wrap:after {
-	content: "";
-	display: table;
-	clear: both;
+.author-box,
+.clearfix,
+.entry,
+.entry-content,
+.site-footer,
+.footer-widgets,
+.site-header,
+.pagination,
+.site-container,
+.site-inner,
+.wrap {
+	@include clearfix;
 }
 
 html,

@@ -2,7 +2,7 @@
 --------------------------------------------- */
 
 .breadcrumbs {
-	font-size: $secondary-font-size;
+	font-size: $medium-font-size;
 	margin-bottom: 15px;
 
 	.sep {
@@ -11,7 +11,7 @@
 }
 
 .loop-meta {
-	margin-bottom: 30px;
+	margin-bottom: $base-margin;
 
 	p:last-child {
 		margin-bottom: 0;
@@ -73,7 +73,7 @@
 --------------------------------------------- */
 
 .avatar {
-	border-radius: 100%;
+	border-radius: $base-border-radius;
 	display: block;
 }
 
@@ -97,7 +97,11 @@ img.alignnone,
 .alignnone {
 	max-width: 100%;
 	display: block;
-	margin: 0 auto 26px;
+	margin: 0 auto $content-margin-small;
+
+	@include media($small-screen-up) {
+		margin-bottom: $content-margin;
+	}
 }
 
 @include media($smaller-screen-up) {
@@ -118,13 +122,13 @@ img.alignnone,
 	a.alignleft,
 	img.alignleft,
 	.wp-caption.alignleft {
-		margin: 0 24px 26px 0;
+		margin: 0 24px $content-margin 0;
 	}
 
 	a.alignright,
 	img.alignright,
 	.wp-caption.alignright {
-		margin: 0 0 26px 24px;
+		margin: 0 0 $content-margin 24px;
 	}
 }
 

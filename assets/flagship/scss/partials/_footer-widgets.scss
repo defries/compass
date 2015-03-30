@@ -3,8 +3,7 @@
 	border-top: 1px solid $footer-widgets-border-color;
 	border-bottom: 1px solid $footer-widgets-border-color;
 	color: $footer-widgets-font-color;
-	padding-bottom: 10px;
-	padding-top: 40px;
+	padding: $base-padding 0 10px;
 
 	.widget-title {
 		color: $footer-widgets-heading-color;
@@ -14,7 +13,7 @@
 		padding: 0;
 
 		@include media($small-screen-up) {
-			padding: 0 30px;
+			padding: 0 $widget-padding;
 		}
 	}
 

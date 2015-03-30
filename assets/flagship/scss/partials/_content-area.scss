@@ -2,29 +2,21 @@
 --------------------------------------------- */
 
 .entry {
-	margin-bottom: 30px;
+	margin-bottom: $base-margin;
 	padding: 0;
 	position: relative;
 
 	@include media($small-screen-up) {
-		padding: 40px 40px 24px;
+		padding: $article-padding;
 	}
 }
 
 .content .entry {
 	background-color: $entry-background-color;
+	border-bottom: 1px solid $entry-border-color;
 
 	@include media($small-screen-up) {
 		border: 1px solid $entry-border-color;
-	}
-}
-
-.plural .content .entry {
-	border-bottom: 1px solid $entry-border-color;
-
-	&:last-of-type {
-		border: 0;
-		margin: 0;
 	}
 }
 
@@ -52,7 +44,7 @@
 		@include transform(rotate(45deg));
 		background-color: $corner-ribbon-background-color;
 		color: $corner-ribbon-font-color;
-		font-size: $secondary-font-size - 2px;
+		font-size: $small-font-size;
 		font-weight: 800;
 		margin: 0;
 		position: relative;
@@ -73,16 +65,24 @@
 	> ol,
 	> ul,
 	> dl {
-		margin-bottom: 26px;
+		margin-bottom: $content-margin-small;
+
+		@include media($small-screen-up) {
+			margin-bottom: $content-margin;
+		}
 	}
 
 	ol,
 	ul {
-		margin-left: 40px;
+		margin-left: 20px;
+
+		@include media($small-screen-up) {
+			margin-left: $base-padding;
+		}
 	}
 
 	li {
-		margin-bottom: 2%;
+		margin-bottom: 1%;
 	}
 
 	ol > li {
@@ -95,12 +95,12 @@
 
 	li ol,
 	li ul {
-		margin-top: 2%;
+		margin-top: 1%;
 	}
 
 	blockquote {
 		border-left: 7px solid $blockquote-border-color;
-		margin: 30px 5% 30px 0;
+		margin: 4% 5% 4% 0;
 		padding: 0 0 0 5%;
 	}
 
@@ -144,7 +144,7 @@
 	}
 
 	.search-form {
-		margin-bottom: 30px;
+		margin-bottom: $content-margin;
 	}
 }
 
@@ -153,7 +153,7 @@
 
 .entry-meta {
 	color: $entry-meta-font-color;
-	font-size: $secondary-font-size;
+	font-size: $medium-font-size;
 	margin-bottom: 0;
 
 	span,
@@ -177,7 +177,11 @@
 }
 
 .entry-header .entry-meta {
-	margin-bottom: 26px;
+	margin-bottom: $content-margin-small;
+
+	@include media($small-screen-up) {
+		margin-bottom: $content-margin;
+	}
 }
 
 .entry-footer {
@@ -186,7 +190,7 @@
 		margin: 0;
 
 		&:last-of-type {
-			padding: 0 0 26px;
+			padding: 0 0 $content-margin;
 		}
 	}
 
@@ -206,13 +210,13 @@
 .featured-media {
 	background: $featured-media-background-color;
 	display: block;
-	margin: 0 0 26px;
+	margin: 0 0 $content-margin;
 	overflow: hidden;
 
 	@include media($small-screen-up) {
-		margin-left: -40px;
-		margin-right: -40px;
-		margin-top: -40px;
+		margin-left: -$base-padding;
+		margin-right: -$base-padding;
+		margin-top: -$base-padding;
 	}
 
 	&.audio {

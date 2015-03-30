@@ -12,7 +12,7 @@
 	word-break: normal;
 
 	@include media($smaller-screen-up) {
-		padding-top: 30px;
+		padding-top: $site-inner-padding;
 	}
 }
 

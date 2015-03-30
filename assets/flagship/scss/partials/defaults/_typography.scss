@@ -1,15 +1,18 @@
+html {
+	font-size: $base-font-size-medium;
+
+	@include media($medium-screen-up) {
+		font-size: $base-font-size;
+	}
+}
+
 body {
 	background-color: $base-background-color;
 	color: $base-font-color;
 	font-family: $base-font-family;
-	font-size: $secondary-font-size;
 	font-weight: 400;
 	line-height: $base-line-height;
 	-webkit-font-smoothing: antialiased;
-
-	@include media($small-screen-up) {
-		font-size: $base-font-size;
-	}
 }
 
 a,
@@ -45,7 +48,7 @@ a {
 }
 
 p {
-	margin: 0 0 26px;
+	margin: 0 0 $content-margin;
 	padding: 0;
 }
 
@@ -64,8 +67,8 @@ pre {
 	background: $pre-background-color;
 	color: $base-heading-color;
 	font-family: $monospace;
-	font-size: $secondary-font-size;
-	margin-bottom: 26px;
+	font-size: $medium-font-size;
+	margin-bottom: $content-margin;
 	max-width: 100%;
 	overflow: auto;
 	padding: 3% 10% 3% 5%;
@@ -79,12 +82,12 @@ kbd,
 tt,
 var {
 	font-family: $monospace;
-	font-size: 15px;
+	font-size: $medium-font-size;
 }
 
 address {
 	font-style: italic;
-	margin: 0 0 26px;
+	margin: 0 0 $content-margin;
 }
 
 abbr,
@@ -139,7 +142,7 @@ blockquote {
 	color: $base-blockquote-color;
 	font-family: $blockquote-font-family;
 	font-style: italic;
-	margin: 40px;
+	margin: $base-margin;
 
 	cite {
 		display: block;
@@ -172,23 +175,43 @@ h6 {
 }
 
 h1 {
-	font-size: $h1-font-size;
+	font-size: $h1-font-size-small;
+
+	@include media($small-screen-up) {
+		font-size: $h1-font-size;
+	}
 }
 
 h2 {
-	font-size: $h2-font-size;
+	font-size: $h2-font-size-small;
+
+	@include media($small-screen-up) {
+		font-size: $h2-font-size;
+	}
 }
 
 h3 {
-	font-size: $h3-font-size;
+	font-size: $h3-font-size-small;
+
+	@include media($small-screen-up) {
+		font-size: $h3-font-size;
+	}
 }
 
 h4 {
-	font-size: $h4-font-size;
+	font-size: $h4-font-size-small;
+
+	@include media($small-screen-up) {
+		font-size: $h4-font-size;
+	}
 }
 
 h5 {
-	font-size: $h5-font-size;
+	font-size: $h5-font-size-small;
+
+	@include media($small-screen-up) {
+		font-size: $h5-font-size;
+	}
 }
 
 h6 {

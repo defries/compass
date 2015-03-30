@@ -1,12 +1,12 @@
 .sidebar {
-	font-size: $secondary-font-size;
+	font-size: $widget-font-size;
 
 	a {
 		color: $widget-link-color;
 
 		&:hover,
 		&:focus {
-			color: $base-link-color;
+			color: $widget-link-color-hover;
 		}
 	}
 
@@ -24,11 +24,7 @@
 	.widget {
 		background-color: $widget-background-color;
 		border: 1px solid $base-border-color;
-		padding: 20px;
-
-		@include media($small-screen-up) {
-			padding: 40px;
-		}
+		padding: $widget-padding;
 	}
 
 	.widget-title a {
