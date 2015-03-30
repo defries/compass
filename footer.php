@@ -28,7 +28,7 @@
 						__( 'Copyright &#169; %1$s %2$s. Built on the %3$s starter theme by %4$s.', 'compass' ),
 						date_i18n( 'Y' ),
 						hybrid_get_site_link(),
-						'<a class="theme-link" href="https://flagshipwp.com/compass/">Compass</a>',
+						flagship_get_theme_link(),
 						flagship_get_credit_link()
 					);
 					?>
