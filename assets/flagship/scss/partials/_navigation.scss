@@ -108,6 +108,15 @@
 		float: right;
 		text-align: right;
 	}
+
+	li > a {
+		padding-top: 23px;
+		padding-bottom: 23px;
+	}
+
+	.sub-menu {
+		border-top: 1px solid $menu-header-border-color;
+	}
 }
 
 .menu-primary {
@@ -115,10 +124,6 @@
 
 	@include media($medium-screen-up) {
 		display: block;
-	}
-
-	.sub-menu {
-		border-top: 1px solid $menu-header-border-color;
 	}
 }
 
