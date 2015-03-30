@@ -48,8 +48,12 @@ a {
 }
 
 p {
-	margin: 0 0 $content-margin;
+	margin: 0 0 $content-margin-small;
 	padding: 0;
+
+	@include media($small-screen-up) {
+		margin-bottom: $content-margin;
+	}
 }
 
 b,
