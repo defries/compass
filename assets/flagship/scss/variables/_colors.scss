@@ -62,19 +62,19 @@ $header-link-color:       $off-black;
 
 // Navigation Colors
 //------------------------------------------------------------------------------
-$nav-background-color:         $white;
-$nav-border-color:             $base-border-color;
-$nav-link-color:               $dark-gray;
-$nav-link-color-hover:         $base-link-color;
+$nav-background-color:     $white;
+$nav-border-color:         $base-border-color;
+$nav-link-color:           $dark-gray;
+$nav-link-color-hover:     $base-link-color;
 
-$menu-header-border-color:     $base-border-color;
-$menu-header-color:            $light-gray;
-$menu-header-color-hover:      $base-link-color;
+$menu-header-border-color: $base-border-color;
+$menu-header-color:        $light-gray;
+$menu-header-color-hover:  $base-link-color;
 
-$primary-background-color:     $nav-background-color;
-$primary-border-color:         $base-border-color;
-$primary-link-color:           lighten($nav-link-color, 10);
-$primary-link-color-hover:     $base-link-color;
+$primary-background-color: $nav-background-color;
+$primary-border-color:     $base-border-color;
+$primary-link-color:       lighten($nav-link-color, 10);
+$primary-link-color-hover: $base-link-color;
 
 // Mobile Menu Colors
 //------------------------------------------------------------------------------
@@ -114,6 +114,10 @@ $gallery-caption-font-color:       $white;
 $intro-paragraph-border-color:     $light-fog;
 $author-box-background-color:      $white;
 $author-box-border-color:          $base-border-color;
+$author-box-link-color:            $base-link-color;
+$author-box-link-color-hover:      $base-link-color-hover;
+$author-box-meta-link-color:       $entry-meta-link-color;
+$author-box-meta-link-color-hover: $entry-meta-link-color-hover;
 
 // Icon Colors
 //------------------------------------------------------------------------------
@@ -166,7 +170,6 @@ $page-links-border-color-hover:       $pagination-border-color-hover;
 $widget-background-color: $white;
 $widget-link-color:       $medium-gray;
 $widget-link-color-hover: $base-link-color;
-
 
 // Footer Widgets Colors
 //------------------------------------------------------------------------------

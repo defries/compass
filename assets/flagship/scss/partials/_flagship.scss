@@ -34,11 +34,29 @@
 			display: inline-block;
 			margin: 0 5px 5px;
 		}
+
+		a {
+			color: $author-box-meta-link-color;
+
+			&:hover,
+			&:focus {
+				color: $author-box-meta-link-color-hover;
+			}
+		}
 	}
 }
 
 .author-box-title {
 	margin-bottom: 4px;
+
+	a {
+		color: $author-box-meta-link-color;
+
+		&:hover,
+		&:focus {
+			color: $author-box-meta-link-color-hover;
+		}
+	}
 }
 
 /* Typography Formats
