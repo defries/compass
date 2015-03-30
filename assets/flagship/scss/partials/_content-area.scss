@@ -176,6 +176,21 @@
 	}
 }
 
+.entry-terms {
+	display: block;
+	padding-bottom: 5px;
+
+	&:last-child {
+		padding-bottom: 0;
+	}
+
+	span,
+	time,
+	a {
+		margin-right: 0;
+	}
+}
+
 .entry-header .entry-meta {
 	margin-bottom: $content-margin-small;
 
@@ -191,15 +206,6 @@
 
 		&:last-of-type {
 			padding: 0 0 $content-margin;
-		}
-	}
-
-	.entry-terms {
-		display: block;
-		padding-bottom: 5px;
-
-		&:last-child {
-			padding-bottom: 0;
 		}
 	}
 }
