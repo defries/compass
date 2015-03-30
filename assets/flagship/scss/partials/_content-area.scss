@@ -30,7 +30,7 @@
 
 .entry-title a:hover,
 .entry-title a:focus {
-	color: $base-heading-hover-color;
+	color: $base-heading-color-hover;
 }
 
 .corner-ribbon {
@@ -171,7 +171,7 @@
 
 		&:hover,
 		&:focus {
-			color: $entry-meta-link-hover-color;
+			color: $entry-meta-link-color-hover;
 		}
 	}
 }

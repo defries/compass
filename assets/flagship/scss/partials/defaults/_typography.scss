@@ -37,12 +37,12 @@ a {
 	text-decoration: none;
 
 	&:hover {
-		color: $base-link-hover-color;
+		color: $base-link-color-hover;
 	}
 
 	&:active,
 	&:focus {
-		color: $base-link-hover-color;
+		color: $base-link-color-hover;
 		outline: none;
 	}
 }

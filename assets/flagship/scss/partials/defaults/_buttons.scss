@@ -17,8 +17,8 @@
 
 	&:hover,
 	&:focus {
-		background-color: $cta-button-background-hover-color;
-		color: $cta-button-font-hover-color;
+		background-color: $cta-button-background-color-hover;
+		color: $cta-button-font-color-hover;
 	}
 }
 
@@ -42,13 +42,13 @@ input[type="submit"]:hover,
 input[type="submit"]:focus,
 .button:hover,
 .button:focus {
-	background-color: $base-button-background-hover-color;
-	color: $base-button-font-hover-color;
+	background-color: $base-button-background-color-hover;
+	color: $base-button-font-color-hover;
 }
 
 .entry-content .button:hover,
 .entry-content .button:focus {
-	color: $base-button-font-hover-color;
+	color: $base-button-font-color-hover;
 }
 
 .block-button,
@@ -62,5 +62,5 @@ input[type="submit"]:focus,
 
 .entry-content .cta.button:hover,
 .entry-content .cta.button:focus {
-	color: $cta-button-font-hover-color;
+	color: $cta-button-font-color-hover;
 }

@@ -21,7 +21,7 @@
 		color: $footer-widgets-link-color;
 
 		&:hover {
-			color: $footer-widgets-link-hover-color;
+			color: $footer-widgets-link-color-hover;
 		}
 	}
 
@@ -48,8 +48,8 @@
 	input[type="submit"]:focus,
 	input[type="reset"]:hover,
 	input[type="reset"]:focus {
-		background-color: $footer-widgets-button-background-hover-color;
-		color: $footer-widgets-button-font-hover-color;
+		background-color: $footer-widgets-button-background-color-hover;
+		color: $footer-widgets-button-font-color-hover;
 	}
 
 	th,

@@ -28,7 +28,7 @@
 	.current-menu-parent > a,
 	.sub-menu .current-menu-item > a:hover,
 	.sub-menu .current-menu-item > a:focus {
-		color: $nav-link-hover-color;
+		color: $nav-link-color-hover;
 	}
 
 	.sub-menu {
@@ -160,7 +160,7 @@
 	.current-menu-item > a,
 	.sub-menu .current-menu-item > a:hover,
 	.sub-menu .current-menu-item > a:focus {
-		color: $primary-link-hover-color;
+		color: $primary-link-color-hover;
 	}
 }
 
@@ -240,7 +240,7 @@
 		li a:hover,
 		li a:focus {
 			background: lighten($sidr-background-color, 3);
-			color: $sidr-hover-color;
+			color: $sidr-color-hover;
 		}
 	}
 
@@ -267,7 +267,7 @@
 		li a:hover,
 		li a:focus {
 			background: lighten($sidr-background-color, 3);
-			color: $sidr-hover-color;
+			color: $sidr-color-hover;
 		}
 	}
 

@@ -38,8 +38,8 @@
 
 		&:hover,
 		&:focus {
-			background: $pagination-background-hover-color;
-			border: 1px solid $pagination-border-hover-color;
+			background: $pagination-background-color-hover;
+			border: 1px solid $pagination-border-color-hover;
 		}
 	}
 }
@@ -81,7 +81,7 @@
 
 		&:hover,
 		&:focus {
-			background: $page-links-background-hover-color;
+			background: $page-links-background-color-hover;
 			color: $page-links-link-color;
 		}
 	}
@@ -132,7 +132,7 @@
 .nav-previous a:hover,
 .nav-next a:focus,
 .nav-previous a:focus {
-	background: $nav-single-background-hover-color;
+	background: $nav-single-background-color-hover;
 	color: $nav-single-link-color;
 }
 
