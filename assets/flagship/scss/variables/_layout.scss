@@ -19,3 +19,39 @@ $large-screen-up:     new-breakpoint(min-width $large-screen    12);
 $base-wrap-max-width:    $max-width - 372px; // 768px;
 $wrap-max-width-medium:  $max-width - 180px; // 960px
 $wrap-max-width-large:   $max-width;
+
+// Global Spacing
+//------------------------------------------------------------------------------
+$base-vertical-spacing: 0.5em;
+$base-margin:           30px;
+$base-padding:          40px;
+
+// Layout Spacing
+//------------------------------------------------------------------------------
+$site-inner-padding: 30px;
+
+// Content Spacing
+//------------------------------------------------------------------------------
+$content-margin:         26px;
+$content-margin-small:   16px;
+$article-padding:        $base-padding $base-padding ($base-padding - $content-margin);
+$article-padding-small:  20px;
+
+$author-box-padding:       $base-padding;
+$author-box-padding-small: $article-padding-small;
+
+// Comment Spacing
+//------------------------------------------------------------------------------
+$comments-padding:        $article-padding;
+$comments-padding-small:  $article-padding-small;
+$comment-padding:         $article-padding-small;
+$comment-margin:          $article-padding-small;
+$comment-margin-small:    $article-padding-small;
+
+// Widget Spacing
+//------------------------------------------------------------------------------
+$widget-padding: 30px;
+
+// Navigation Spacing
+//------------------------------------------------------------------------------
+$sidr-item-padding: 20px;
