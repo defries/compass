@@ -2,16 +2,14 @@
 	background-color: $header-background-color;
 	border-bottom: 1px solid $header-border-color;
 	color: $header-font-color;
-	padding-left: 5%;
-	padding-right: 5%;
+	padding: 10px 0;
 
 	@include media($small-screen-up) {
-		padding-left: 0;
-		padding-right: 0;
+		padding: 15px 0;
 	}
 
-	> .wrap {
-		padding: 1.5% 0;
+	@include media($medium-screen-up) {
+		padding: 25px 0;
 	}
 }
 
