@@ -62,11 +62,11 @@
 /* Typography Formats
 --------------------------------------------- */
 
-.dropcap:first-letter {
+.dropcap {
 	float: left;
 	font-size: 300%;
-	line-height: 0.5;
-	margin: 0.205em 0.153em 0 0;
+	line-height: 0.6;
+	margin: 0.7rem 0.5rem 0 0;
 }
 
 @include media($small-screen-up) {
