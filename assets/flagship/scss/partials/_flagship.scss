@@ -18,17 +18,23 @@
 	}
 
 	.avatar {
-		margin: 0 auto $content-margin;
+		margin: 0 auto $content-margin-small;
+		width: 100px;
 
 		@include media($small-screen-up) {
 			float: left;
+			margin-bottom: $content-margin;
 			margin-right: $content-margin;
 		}
 	}
 
 	.social-icons {
 		display: block;
-		margin-top: $content-margin;
+		margin: $content-margin-small 0;
+
+		@include media($small-screen-up) {
+			margin: $content-margin 0;
+		}
 
 		li {
 			display: inline-block;

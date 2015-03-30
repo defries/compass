@@ -25,6 +25,7 @@ $wrap-max-width-large:   $max-width;
 $base-vertical-spacing: 0.5em;
 $base-margin:           30px;
 $base-padding:          40px;
+$base-padding-small:    20px;
 
 // Layout Spacing
 //------------------------------------------------------------------------------
@@ -35,9 +36,9 @@ $site-inner-padding: 30px;
 $content-margin:         26px;
 $content-margin-small:   16px;
 $article-padding:        $base-padding $base-padding ($base-padding - $content-margin);
-$article-padding-small:  20px;
+$article-padding-small:  $base-padding-small $base-padding-small ($base-padding-small - $content-margin-small);
 
-$author-box-padding:       $base-padding;
+$author-box-padding:       $article-padding;
 $author-box-padding-small: $article-padding-small;
 
 // Comment Spacing
