@@ -21,7 +21,7 @@
 
 .comment-container {
 	background-color: $comment-background-color;
-	margin-bottom: 20px;
+	margin-bottom: $base-margin;
 
 	@include media($small-screen-up) {
 		border: 1px solid $comment-border-color;
@@ -156,7 +156,7 @@
 
 .comment-content {
 	clear: both;
-	padding-top: $comment-padding;
+	padding-top: 10px;
 
 	@include media($small-screen-up) {
 		padding: $comment-padding;
@@ -175,7 +175,7 @@
 
 	ol,
 	ul {
-		margin-left: $comment-padding;
+		margin-left: 20px;
 	}
 
 	li {
@@ -262,9 +262,9 @@
 .form-allowed-tags {
 	background-color: $allowed-tags-background-color;
 	font-size: $medium-font-size;
-	padding: $comments-padding-small;
+	padding: 10px;
 
 	@include media($small-screen-up) {
-		padding: $comments-padding;
+		padding: 20px;
 	}
 }

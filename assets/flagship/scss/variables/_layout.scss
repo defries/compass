@@ -44,9 +44,10 @@ $author-box-padding-small: $article-padding-small;
 //------------------------------------------------------------------------------
 $comments-padding:        $article-padding;
 $comments-padding-small:  $article-padding-small;
-$comment-padding:         $article-padding-small;
-$comment-margin:          $article-padding-small;
-$comment-margin-small:    $article-padding-small;
+$comment-padding:         20px 20px 0;
+$comment-padding-small:   10px 10 0;
+$comment-margin:          20px;
+$comment-margin-small:    10px;
 
 // Widget Spacing
 //------------------------------------------------------------------------------
