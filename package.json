@@ -45,7 +45,7 @@
     "url": "https://github.com/FlagshipWP/compass.git"
   },
   "devDependencies": {
-    "flagship-wp-theme-config": "FlagshipWP/flagship-wp-theme-config",
-    "load-flagship-grunt-config": "FlagshipWP/load-flagship-grunt-config"
+    "flagship-wp-theme-config": "FlagshipWP/flagship-wp-theme-config#0.1.2",
+    "load-flagship-grunt-config": "FlagshipWP/load-flagship-grunt-config#0.1.1"
   }
 }
