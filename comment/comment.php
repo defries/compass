@@ -39,7 +39,7 @@
 		<?php if ( hybrid_get_comment_reply_link() ) : ?>
 
 			<footer class="comment-meta">
-				<?php hybrid_comment_reply_link() ?>
+				<?php hybrid_comment_reply_link(); ?>
 			</footer><!-- .comment-meta -->
 
 		<?php endif; ?>
