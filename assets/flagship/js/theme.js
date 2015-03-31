@@ -1,4 +1,4 @@
-/* global compassSkipLinks */
+/* global skipLinkFocus */
 /**
  * JavaScript for Compass
  *
@@ -28,7 +28,7 @@ window.compass = window.compass || {};
 
 	// Document ready.
 	jQuery(function() {
-		compassSkipLinks();
+		skipLinkFocus.init();
 		compass.globalInit();
 	});
 })( this, jQuery );

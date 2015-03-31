@@ -3,7 +3,6 @@ module.exports = {
 	js: {
 		src: [
 			'<%= paths.bower %>/js/concat/**/*.js',
-			'<%= paths.authorAssets %>js/skipLinks.js',
 			'<%= paths.authorAssets %>js/mobileMenu.js',
 			'<%= paths.authorAssets %>js/theme.js'
 		],

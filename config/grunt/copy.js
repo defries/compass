@@ -108,6 +108,7 @@ module.exports = {
 				flatten: true,
 				cwd: 'bower_components/',
 				src: [
+					'skip-link-focus/skip-link-focus.js',
 					'fitvids/jquery.fitvids.js',
 					'accessible-menu/dist/jquery.accessible-menu.js',
 					'sidr/jquery.sidr.min.js'

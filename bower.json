@@ -8,6 +8,7 @@
     "fitvids": "~1.1",
     "accessible-menu": "GaryJones/accessible-menu#master",
     "sidr": "~1.2",
-    "themicons": "cedaro/themicons#develop"
+    "themicons": "cedaro/themicons#develop",
+    "skip-link-focus": "~0.1.0"
   }
 }
