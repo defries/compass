@@ -10,14 +10,6 @@
 		color: $footer-widgets-heading-color;
 	}
 
-	.widget {
-		padding: 0;
-
-		@include media($small-screen-up) {
-			padding: 0 $widget-padding;
-		}
-	}
-
 	a {
 		color: $footer-widgets-link-color;
 
