@@ -36,7 +36,7 @@
 
 	</nav><!-- #menu-primary -->
 
-<?php elseif ( current_user_can( 'edit_theme_options' ) ) : ?>
+<?php elseif ( current_user_can( 'edit_theme_options' ) && ! has_nav_menu( 'secondary' ) ) : ?>
 
 	<div class="header-right">
 		<p class="no-menu">
