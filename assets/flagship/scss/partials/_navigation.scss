@@ -202,6 +202,7 @@ body {
 	&:active {
 		background: $menu-button-background-color-hover;
 		color: $menu-button-color-hover;
+		outline: none;
 
 		@include media($medium-screen-up) {
 			display: none;
@@ -223,6 +224,10 @@ body {
 	top: 0;
 	width: 260px;
 	z-index: $menu-mobile-z-index;
+
+	&:focus {
+		outline: none;
+	}
 
 	&.visible {
 		display: block;
