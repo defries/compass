@@ -5,104 +5,132 @@
  * Copyright (c) 2015 Flagship Software, LLC;
  * MIT license
  */
-(function( $ ) {
+(function( $, undefined ) {
 	'use strict';
 
+	var	$$,
+		cache = {};
+
+	$$ = function(selector) {
+		var temp = cache[selector];
+		if (temp !== undefined) {
+			return temp;
+		} else {
+			return cache[selector] = $(selector);
+		}
+	};
+
+	$$.clear = function(selector) {
+		cache[selector] = undefined;
+	};
+
+	$$.fresh = function(selector) {
+		cache[selector] = undefined;
+		return $$(selector);
+	};
+
 	$.fn.compassMobileMenu = function() {
-		var menuSelectors = [],
-			menuSide      = $('body').hasClass( 'rtl' ) ? 'left' : 'right',
-			name          = 'sidr-main',
-			sidrOpen      = null,
-			sidrClose     = null,
-			siteContainer = $( '#site-container' ),
-			menuButton    = $( '<button type="button" id="responsive-menu-button" class="menu-button" aria-expanded="false"></button>' );
+		var menuSide    = $$( 'body' ).hasClass( 'rtl' ) ? 'left' : 'right',
+			$menuButton = $$( '<button type="button" id="menu-toggle" class="menu-button" aria-expanded="false"></button>' );
 
-		if ( 0 !== $( '#menu-primary' ).length ) {
-			menuSelectors.push( '#menu-primary' );
-		}
-
-		if ( 0 !== $( '#menu-secondary' ).length ) {
-			menuSelectors.push( '#menu-secondary' );
-		}
-
-		//* End here if we don't have a menu.
-		if ( 0 === menuSelectors.length ) {
+		// Return early if we don't have any menus to work with.
+		if ( 0 === $$( '#menu-primary' ).length && 0 === $$( '#menu-secondary' ).length ) {
 			return;
 		}
 
-		//* Add a responsive menu button.
-		$( '#branding' ).before( menuButton );
-
-		sidrOpen = function() {
-			var navEl        = $( '#' + name ),
-				navItems     = $( '#' + name + ' a' ),
-				firstNavItem = navItems.first(),
-				lastNavItem  = navItems.last();
-
-			menuButton.toggleClass( 'activated' ).attr( 'aria-expanded', true );
-
-			siteContainer.on( 'click.CloseSidr', function( event ) {
-				$.sidr( 'close', name );
-				event.preventDefault();
-			});
-
-			// Add some attributes to the menu container.
-			navEl.attr({ role: 'navigation', tabindex: '0' }).focus();
-
-			// When focus is on the menu container.
-			navEl.on( 'keydown.sidrNav', function( event ) {
-				// If it's not the tab key then return.
-				if ( 9 !== event.keyCode ) {
-					return;
-				}
-				// When tabbing forwards and tabbing out of the last link.
-				if ( lastNavItem[0] === event.target && ! event.shiftKey ) {
-					menuButton.focus();
-					return false;
-				// When tabbing backwards and tabbing out of the first link OR the menu container.
-				} else if ( ( firstNavItem[0] === event.target || navEl[0] === event.target ) && event.shiftKey ) {
-					menuButton.focus();
-					return false;
-				}
-			});
-
-			// When focus is on the toggle button.
-			menuButton.on( 'keydown.sidrNav', function( event ) {
-				// If it's not the tab key then return.
-				if ( 9 !== event.keyCode ) {
-					return;
-				}
-				// when tabbing forwards
-				if ( menuButton[0] === event.target && ! event.shiftKey ) {
-					navEl.focus();
-					return false;
-				}
-			});
-		};
-
-		sidrClose = function() {
-			menuButton.toggleClass( 'activated' ).attr( 'aria-expanded', false );
-			siteContainer.off( 'click.CloseSidr' );
-			// Remove the toggle button keydown event.
-			menuButton.off( 'keydown.sidrNav' );
-		};
-
-		//* Sidr menu init.
-		menuButton.sidr( {
-			name:     name,
-			renaming: false,
-			side:     menuSide,
-			source:   menuSelectors.toString(),
-			onOpen:   sidrOpen,
-			onClose:  sidrClose
-		});
-
-		//* Close sidr menu if open on larger screens
-		$( window ).resize(function() {
-			if ( window.innerWidth >= 1024 ) {
-				$.sidr('close', 'sidr-main');
-				menuButton.attr( 'aria-expanded', false );
+		function menuIsOpen() {
+			if ( $$( 'body' ).hasClass( 'menu-open' ) ) {
+				return true;
 			}
-		});
+			return false;
+		}
+
+		function menusMerged() {
+			if ( 0 === $$.fresh( '#menu-primary #secondary' ).length ) {
+				return false;
+			}
+			return true;
+		}
+
+		function mergeMenus() {
+			if ( 0 === $$( '#menu-primary' ).length || 0 === $$( '#menu-secondary' ).length ) {
+				return;
+			}
+			if ( ! menusMerged() && ! menuIsOpen() ) {
+				$$( '#menu-secondary .nav-menu' ).appendTo( '#menu-primary .nav-menu' );
+			}
+		}
+
+		function splitMenus() {
+			if ( 0 === $$( '#menu-secondary' ).length || 0 === $$( '#menu-primary #secondary' ).length ) {
+				return;
+			}
+			$$( '#menu-primary #secondary' ).appendTo( '#menu-secondary .wrap' );
+		}
+
+		function toggleClasses() {
+			var $mobileMenu = $$( '#menu-primary' ),
+				menuClass   = 'menu-primary';
+
+			if ( 0 === $$( '#menu-primary' ).length ) {
+				$mobileMenu = $$( '#menu-secondary' );
+				menuClass   = 'menu-secondary';
+			}
+			$mobileMenu.toggleClass( menuClass + ' menu-mobile visible ' + menuSide );
+			$menuButton.toggleClass( 'activated' );
+		}
+
+		function toggleAttributes() {
+			$menuButton.attr('aria-expanded', function(index, attr) {
+				return attr === 'false' ? 'true' : 'false';
+			});
+		}
+
+		function openMenu() {
+			if ( menuIsOpen() ) {
+				return;
+			}
+			if ( ! menusMerged() ) {
+				mergeMenus();
+			}
+			toggleClasses();
+			toggleAttributes();
+		}
+
+		function closeMenu() {
+			if ( ! menuIsOpen() ) {
+				return;
+			}
+			if ( menusMerged() && window.innerWidth < 1023 ) {
+				splitMenus();
+			}
+			toggleClasses();
+			toggleAttributes();
+		}
+
+		function reflowMenus() {
+			if ( window.innerWidth >= 1023 ) {
+				if ( menusMerged() ) {
+					splitMenus();
+				}
+				closeMenu();
+				$$( 'body' ).removeClass( 'menu-open' );
+			}
+
+			if ( window.innerWidth < 1023 && ! menusMerged() ) {
+				mergeMenus();
+			}
+		}
+
+		function toggleMenu(event) {
+			event.preventDefault();
+			openMenu();
+			closeMenu();
+			$$( 'body' ).toggleClass( 'menu-open' );
+		}
+
+		$$( '#branding' ).after( $menuButton );
+		$menuButton.on( 'click', toggleMenu );
+		$$( window ).resize( reflowMenus );
 	};
 }( jQuery ));
