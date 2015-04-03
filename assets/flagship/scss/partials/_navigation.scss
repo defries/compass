@@ -132,9 +132,13 @@
 }
 
 .no-menu {
-	font-size: 18px;
+	display: none;
 	margin: 0;
 	padding: 12px 0;
+
+	@include media($medium-screen-up) {
+		display: block;
+	}
 
 	.button {
 		padding: 8px 20px;
@@ -171,6 +175,14 @@
 /* Responsive Menu
 --------------------------------------------- */
 
+body {
+	&.menu-open {
+		width: 100%;
+		position: absolute;
+		right: 260px;
+	}
+}
+
 .menu-button {
 	background: $menu-button-background-color;
 	border-radius: $base-border-radius;
@@ -201,8 +213,8 @@
 	}
 }
 
-.sidr {
-	background: $sidr-background-color;
+.menu-mobile {
+	background: $menu-mobile-background-color;
 	display: none;
 	height: 100%;
 	overflow-x: hidden;
@@ -210,13 +222,21 @@
 	position: fixed;
 	top: 0;
 	width: 260px;
-	z-index: $sidr-z-index;
+	z-index: $menu-mobile-z-index;
+
+	&.visible {
+		display: block;
+	}
 
 	&.right {
 		/* @noflip */
 		left: auto;
 		/* @noflip */
 		right: -260px;
+
+		&.visible {
+			right: 0;
+		}
 	}
 
 	&.left {
@@ -224,6 +244,10 @@
 		left: -260px;
 		/* @noflip */
 		right: auto;
+
+		&.visible {
+			left: 0;
+		}
 	}
 
 	.wrap {
@@ -236,15 +260,15 @@
 		}
 
 		li a {
-			border-bottom: 1px solid $sidr-border-color;
-			color: $sidr-color;
-			padding: $sidr-item-padding;
+			border-bottom: 1px solid $menu-mobile-border-color;
+			color: $menu-mobile-color;
+			padding: $menu-mobile-item-padding;
 		}
 
 		li a:hover,
 		li a:focus {
-			background: lighten($sidr-background-color, 3);
-			color: $sidr-color-hover;
+			background: lighten($menu-mobile-background-color, 3);
+			color: $menu-mobile-color-hover;
 		}
 	}
 
@@ -259,23 +283,23 @@
 		width: 100%;
 
 		li a {
-			background: $sidr-background-color;
+			background: $menu-mobile-background-color;
 			border: 0;
-			border-bottom: 1px solid $sidr-border-color;
-			color: $sidr-subnav-color;
-			padding: $sidr-item-padding;
-			padding-left: $sidr-item-padding + 10px;
+			border-bottom: 1px solid $menu-mobile-border-color;
+			color: $menu-mobile-subnav-color;
+			padding: $menu-mobile-item-padding;
+			padding-left: $menu-mobile-item-padding + 10px;
 			width: auto;
 		}
 
 		li a:hover,
 		li a:focus {
-			background: lighten($sidr-background-color, 3);
-			color: $sidr-color-hover;
+			background: lighten($menu-mobile-background-color, 3);
+			color: $menu-mobile-color-hover;
 		}
 	}
 
 	.sub-menu .sub-menu li a {
-		padding-left: $sidr-item-padding + 20px;
+		padding-left: $menu-mobile-item-padding + 20px;
 	}
 }

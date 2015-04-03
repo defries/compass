@@ -17,13 +17,13 @@
 --------------------------------------------- */
 
 .site-branding {
+	display: inline-block;
 	float: none;
 	margin-right: 0;
 	width: auto;
 
 	@include media($medium-screen-up) {
 		@include span-columns(3);
-		float: left;
 	}
 }
 

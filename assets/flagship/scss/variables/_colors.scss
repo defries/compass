@@ -82,11 +82,11 @@ $menu-button-background-color:       transparent;
 $menu-button-link-color:             $off-black;
 $menu-button-background-color-hover: transparent;
 $menu-button-color-hover:            $dark-gray;
-$sidr-background-color:              lighten($off-black, 3);
-$sidr-border-color:                  rgba(255, 255, 255, 0.1);
-$sidr-color:                         lighten($nav-link-color, 30);
-$sidr-color-hover:                   $base-link-color;
-$sidr-subnav-color:                  lighten($nav-link-color, 15);
+$menu-mobile-background-color:       lighten($off-black, 3);
+$menu-mobile-border-color:           rgba(255, 255, 255, 0.1);
+$menu-mobile-color:                  lighten($nav-link-color, 30);
+$menu-mobile-color-hover:            $base-link-color;
+$menu-mobile-subnav-color:           lighten($nav-link-color, 15);
 
 // Entry Colors
 //------------------------------------------------------------------------------
