@@ -29,12 +29,19 @@
 	};
 
 	$.fn.compassMobileMenu = function() {
-		var menuSide    = $$( 'body' ).hasClass( 'rtl' ) ? 'left' : 'right',
-			$menuButton = $$( '<button type="button" id="menu-toggle" class="menu-button" aria-expanded="false"></button>' );
+		var $menuButton = $$( '<button type="button" id="menu-toggle" class="menu-button" aria-expanded="false"></button>' ),
+			$mobileMenu = $$( '#menu-primary' ),
+			menuSide    = $$( 'body' ).hasClass( 'rtl' ) ? 'left' : 'right',
+			menuClass   = 'menu-primary';
 
 		// Return early if we don't have any menus to work with.
 		if ( 0 === $$( '#menu-primary' ).length && 0 === $$( '#menu-secondary' ).length ) {
 			return;
+		}
+
+		if ( 0 === $$( '#menu-primary' ).length ) {
+			$mobileMenu = $$( '#menu-secondary' );
+			menuClass   = 'menu-secondary';
 		}
 
 		function menuIsOpen() {
@@ -68,13 +75,6 @@
 		}
 
 		function toggleClasses() {
-			var $mobileMenu = $$( '#menu-primary' ),
-				menuClass   = 'menu-primary';
-
-			if ( 0 === $$( '#menu-primary' ).length ) {
-				$mobileMenu = $$( '#menu-secondary' );
-				menuClass   = 'menu-secondary';
-			}
 			$mobileMenu.toggleClass( menuClass + ' menu-mobile visible ' + menuSide );
 			$menuButton.toggleClass( 'activated' );
 		}
@@ -82,6 +82,50 @@
 		function toggleAttributes() {
 			$menuButton.attr('aria-expanded', function(index, attr) {
 				return attr === 'false' ? 'true' : 'false';
+			});
+			if ( $mobileMenu.attr( 'tabindex' ) ) {
+				$mobileMenu.removeAttr( 'tabindex' );
+			} else {
+				$mobileMenu.attr( 'tabindex', '0' );
+			}
+		}
+
+		function focusMobileMenu() {
+			var nav        = $mobileMenu[0],
+				navID      = $mobileMenu.attr( 'id' ),
+				$items     = $( '#' + navID + ' a' ),
+				$firstItem = $items.first(),
+				$lastItem  = $items.last(),
+				firstItem  = $firstItem[0],
+				lastItem   = $lastItem[0];
+
+			// When focus is on the menu container.
+			$mobileMenu.on( 'keydown', function( e ) {
+				// If it's not the tab key then return.
+				if ( 9 !== e.keyCode ) {
+					return;
+				}
+				// When tabbing forwards and tabbing out of the last link.
+				if ( lastItem === e.target && ! e.shiftKey ) {
+					$menuButton.focus();
+					return false;
+				}
+				// When tabbing backwards and tabbing out of the first link OR the menu container.
+				if ( ( firstItem === e.target || nav === e.target ) && e.shiftKey ) {
+					$menuButton.focus();
+					return false;
+				}
+			});
+
+			$menuButton.on( 'keydown', function( e ) {
+				// If it's not the tab key then return.
+				if ( 9 !== e.keyCode ) {
+					return;
+				}
+				// when tabbing forwards
+				if ( $menuButton[0] === e.target && ! e.shiftKey ) {
+					$mobileMenu.focus();
+				}
 			});
 		}
 
@@ -94,6 +138,7 @@
 			}
 			toggleClasses();
 			toggleAttributes();
+			focusMobileMenu();
 		}
 
 		function closeMenu() {
