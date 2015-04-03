@@ -172,8 +172,13 @@
 			$$( 'body' ).toggleClass( 'menu-open' );
 		}
 
-		$$( '#branding' ).after( $menuButton );
-		$menuButton.on( 'click', toggleMenu );
-		$$( window ).resize( reflowMenus );
+		function loadMobileMenu() {
+			reflowMenus();
+			$$( '#branding' ).after( $menuButton );
+			$menuButton.on( 'click', toggleMenu );
+			$$( window ).resize( reflowMenus );
+		}
+
+		loadMobileMenu();
 	};
 }( jQuery ));
