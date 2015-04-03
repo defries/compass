@@ -8,25 +8,24 @@
 (function( $, undefined ) {
 	'use strict';
 
-	var	$$,
+	var $$,
 		cache = {};
 
-	$$ = function(selector) {
+	$$ = function( selector ) {
 		var temp = cache[selector];
-		if (temp !== undefined) {
+		if ( temp !== undefined ) {
 			return temp;
-		} else {
-			return cache[selector] = $(selector);
 		}
+		return cache[selector] = $( selector );
 	};
 
-	$$.clear = function(selector) {
+	$$.clear = function( selector ) {
 		cache[selector] = undefined;
 	};
 
-	$$.fresh = function(selector) {
+	$$.fresh = function( selector ) {
 		cache[selector] = undefined;
-		return $$(selector);
+		return $$( selector );
 	};
 
 	$.fn.compassMobileMenu = function() {
