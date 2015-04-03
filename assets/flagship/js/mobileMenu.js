@@ -31,7 +31,6 @@
 	$.fn.compassMobileMenu = function() {
 		var $menuButton = $$( '<button type="button" id="menu-toggle" class="menu-button" aria-expanded="false"></button>' ),
 			$mobileMenu = $$( '#menu-primary' ),
-			menuSide    = $$( 'body' ).hasClass( 'rtl' ) ? 'left' : 'right',
 			menuClass   = 'menu-primary';
 
 		// Return early if we don't have any menus to work with.
@@ -75,7 +74,7 @@
 		}
 
 		function toggleClasses() {
-			$mobileMenu.toggleClass( menuClass + ' menu-mobile visible ' + menuSide );
+			$mobileMenu.toggleClass( menuClass + ' menu-mobile visible' );
 			$menuButton.toggleClass( 'activated' );
 		}
 

@@ -220,7 +220,9 @@ body {
 	height: 100%;
 	overflow-x: hidden;
 	overflow-y: auto;
+	left: auto;
 	position: fixed;
+	right: -260px;
 	top: 0;
 	width: 260px;
 	z-index: $menu-mobile-z-index;
@@ -231,30 +233,7 @@ body {
 
 	&.visible {
 		display: block;
-	}
-
-	&.right {
-		/* @noflip */
-		left: auto;
-		/* @noflip */
-		right: -260px;
-
-		&.visible {
-			/* @noflip */
-			right: 0;
-		}
-	}
-
-	&.left {
-		/* @noflip */
-		left: -260px;
-		/* @noflip */
-		right: auto;
-
-		&.visible {
-			/* @noflip */
-			left: 0;
-		}
+		right: 0;
 	}
 
 	.wrap {
