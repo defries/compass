@@ -85,6 +85,23 @@
 
 /* WordPress
 --------------------------------------------- */
+
+.admin-bar {
+	.menu-mobile {
+		top: 46px;
+
+		@media screen and (min-width: 782px) { // Thanks WordPress.
+			top: 32px;
+		}
+	}
+}
+
+.menu-open {
+	#wpadminbar { // Thanks again WordPress.
+		position: fixed;
+	}
+}
+
 img.centered,
 .aligncenter,
 .alignleft,
