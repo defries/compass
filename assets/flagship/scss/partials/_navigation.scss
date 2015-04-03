@@ -240,6 +240,7 @@ body {
 		right: -260px;
 
 		&.visible {
+			/* @noflip */
 			right: 0;
 		}
 	}
@@ -251,6 +252,7 @@ body {
 		right: auto;
 
 		&.visible {
+			/* @noflip */
 			left: 0;
 		}
 	}
