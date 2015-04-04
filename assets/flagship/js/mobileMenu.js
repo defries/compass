@@ -1,6 +1,7 @@
 /**
  * Compass Mobile Menu
- * Merge existing menus into an off-canvas mobile menu.
+ *
+ * Merge existing menus into an a11y-compliant off-canvas mobile menu.
  *
  * @version   0.1.0
  * @copyright 2015 Flagship Software, LLC;
@@ -39,6 +40,7 @@
 			return;
 		}
 
+		// Use the secondary menu as the mobile menu if we don't have a primary.
 		if ( 0 === $$( '#menu-primary' ).length ) {
 			$mobileMenu = $$( '#menu-secondary' );
 			menuClass   = 'menu-secondary';
@@ -124,7 +126,7 @@
 		 * @return void
 		 */
 		function toggleAttributes() {
-			$menuButton.attr('aria-expanded', function(index, attr) {
+			$menuButton.attr( 'aria-expanded', function( index, attr ) {
 				return attr === 'false' ? 'true' : 'false';
 			});
 			if ( $mobileMenu.attr( 'tabindex' ) ) {
@@ -157,18 +159,17 @@
 				firstItem  = $firstItem[0],
 				lastItem   = $lastItem[0];
 
-			// When focus is on the menu container.
 			$mobileMenu.on( 'keydown', function( e ) {
-				// If it's not the tab key then return.
+				// Return early if we're not using the tab key.
 				if ( 9 !== e.keyCode ) {
 					return;
 				}
-				// When tabbing forwards and tabbing out of the last link.
+				// Tabbing forwards and tabbing out of the last link.
 				if ( lastItem === e.target && ! e.shiftKey ) {
 					$menuButton.focus();
 					return false;
 				}
-				// When tabbing backwards and tabbing out of the first link OR the menu container.
+				// Tabbing backwards and tabbing out of the first link or the menu.
 				if ( ( firstItem === e.target || nav === e.target ) && e.shiftKey ) {
 					$menuButton.focus();
 					return false;
@@ -176,13 +177,13 @@
 			});
 
 			$menuButton.on( 'keydown', function( e ) {
-				// If it's not the tab key then return.
+				// Return early if we're not using the tab key.
 				if ( 9 !== e.keyCode ) {
 					return;
 				}
-				// when tabbing forwards
 				if ( $menuButton[0] === e.target && ! e.shiftKey ) {
 					$mobileMenu.focus();
+					return false;
 				}
 			});
 		}
