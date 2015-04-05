@@ -140,10 +140,10 @@
 		 * This forces the focus state of either the mobile menu or the menu
 		 * button when a user is tabbing through the mobile menu. When a user
 		 * opens the mobile menu, it is given the focus so keyboard navigation
-		 * will work as expected as the user tabs through the menu items.
+		 * will work as expected while the user tabs through the menu items.
 		 *
-		 * When a user tabs out of either the end or beginning of the menu,
-		 * focus will be restored to the mobile menu button so the menu can be
+		 * When a user tabs out of either the beginning or end of the menu,
+		 * focus is be restored to the mobile menu button so the menu can be
 		 * closed by pressing enter.
 		 *
 		 * @since  0.1.0
@@ -153,11 +153,9 @@
 		function focusMobileMenu() {
 			var nav        = $mobileMenu[0],
 				navID      = $mobileMenu.attr( 'id' ),
-				$items     = $( '#' + navID + ' a' ),
+				$items     = $$( '#' + navID + ' a' ),
 				$firstItem = $items.first(),
-				$lastItem  = $items.last(),
-				firstItem  = $firstItem[0],
-				lastItem   = $lastItem[0];
+				$lastItem  = $items.last();
 
 			$mobileMenu.on( 'keydown', function( e ) {
 				// Return early if we're not using the tab key.
@@ -165,12 +163,12 @@
 					return;
 				}
 				// Tabbing forwards and tabbing out of the last link.
-				if ( lastItem === e.target && ! e.shiftKey ) {
+				if ( $lastItem[0] === e.target && ! e.shiftKey ) {
 					$menuButton.focus();
 					return false;
 				}
 				// Tabbing backwards and tabbing out of the first link or the menu.
-				if ( ( firstItem === e.target || nav === e.target ) && e.shiftKey ) {
+				if ( ( $firstItem[0] === e.target || nav === e.target ) && e.shiftKey ) {
 					$menuButton.focus();
 					return false;
 				}
@@ -224,10 +222,9 @@
 		}
 
 		/**
-		 * This will either split or merge our existing menus based on screen
-		 * width. In addition to splitting or merging the menus, it will also
-		 * force the menu to close if the screen is larger than the specified
-		 * width for a mobile menu to be displayed.
+		* This will either split or merge our existing menus based on screen
+		* width. It will also force the menu to close if the screen is larger
+		* than the specified width for a mobile menu to be displayed.
 		 *
 		 * @since  0.1.0
 		 * @return void
@@ -271,10 +268,10 @@
 		 * @return void
 		 */
 		function loadMobileMenu() {
-			reflowMenus();
 			$$( '#branding' ).after( $menuButton );
 			$menuButton.on( 'click', toggleMenu );
 			$$( window ).resize( reflowMenus );
+			$$( window ).trigger( 'resize' );
 		}
 
 		loadMobileMenu();
