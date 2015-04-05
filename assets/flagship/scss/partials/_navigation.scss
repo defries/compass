@@ -134,7 +134,7 @@
 .no-menu {
 	display: none;
 	margin: 0;
-	padding: 12px 0;
+	padding: 2px 0;
 
 	@include media($medium-screen-up) {
 		display: block;
