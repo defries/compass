@@ -179,8 +179,8 @@
 				if ( 9 !== e.keyCode ) {
 					return;
 				}
-				if ( $menuButton[0] === e.target && ! e.shiftKey ) {
-					$mobileMenu.focus();
+				if ( menuIsOpen() && $menuButton[0] === e.target && ! e.shiftKey ) {
+					$firstItem.focus();
 					return false;
 				}
 			});
