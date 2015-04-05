@@ -50,11 +50,14 @@ function compass_setup() {
 	// https://github.com/FlagshipWP/flagship-library/wiki/Flagship-Site-Logo
 	add_theme_support( 'site-logo' );
 
-	// Add navigation menus.
-	register_nav_menu( 'primary',   _x( 'Primary Menu', 'nav menu location', 'compass' ) );
-	register_nav_menu( 'secondary', _x( 'Secondary Menu', 'nav menu location', 'compass' ) );
+	// https://developer.wordpress.org/themes/functionality/navigation-menus/
+	register_nav_menus( array(
+		'primary'   => _x( 'Primary Menu', 'nav menu location', 'compass' ),
+		'secondary' => _x( 'Secondary Menu', 'nav menu location', 'compass' ),
+	) );
 
-	$formats = array(
+	// https://developer.wordpress.org/themes/functionality/post-formats/
+	add_theme_support( 'post-formats', array(
 		'aside',
 		'gallery',
 		'link',
@@ -64,10 +67,7 @@ function compass_setup() {
 		'video',
 		'audio',
 		'chat',
-	);
-
-	// http://codex.wordpress.org/Post_Formats
-	add_theme_support( 'post-formats', $formats );
+	) );
 
 	// https://github.com/justintadlock/breadcrumb-trail
 	add_theme_support( 'breadcrumb-trail' );
