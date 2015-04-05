@@ -151,8 +151,8 @@
 --------------------------------------------- */
 
 .menu-secondary {
-	background-color: $primary-background-color;
-	border-bottom: 1px solid $primary-border-color;
+	background-color: $menu-secondary-background-color;
+	border-bottom: 1px solid $menu-secondary-border-color;
 	display: none;
 
 	@include media($medium-screen-up) {
@@ -160,7 +160,7 @@
 	}
 
 	li > a {
-		color: $primary-link-color;
+		color: $menu-secondary-link-color;
 	}
 
 	li > a:hover,
@@ -168,7 +168,7 @@
 	.current-menu-item > a,
 	.sub-menu .current-menu-item > a:hover,
 	.sub-menu .current-menu-item > a:focus {
-		color: $primary-link-color-hover;
+		color: $menu-secondary-link-color-hover;
 	}
 }
 

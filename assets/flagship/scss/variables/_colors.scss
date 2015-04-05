@@ -62,19 +62,24 @@ $header-link-color:       $off-black;
 
 // Navigation Colors
 //------------------------------------------------------------------------------
-$nav-background-color:     $white;
-$nav-border-color:         $base-border-color;
-$nav-link-color:           $dark-gray;
-$nav-link-color-hover:     $base-link-color;
+$nav-background-color:            $white;
+$nav-border-color:                $base-border-color;
+$nav-link-color:                  $dark-gray;
+$nav-link-color-hover:            $base-link-color;
 
-$menu-header-border-color: $base-border-color;
-$menu-header-color:        $light-gray;
-$menu-header-color-hover:  $base-link-color;
+$menu-header-border-color:        $base-border-color;
+$menu-header-color:               $light-gray;
+$menu-header-color-hover:         $base-link-color;
 
-$primary-background-color: $nav-background-color;
-$primary-border-color:     $base-border-color;
-$primary-link-color:       lighten($nav-link-color, 10);
-$primary-link-color-hover: $base-link-color;
+$menu-primary-background-color:   $nav-background-color;
+$menu-primary-border-color:       $base-border-color;
+$menu-primary-link-color:         lighten($nav-link-color, 10);
+$menu-primary-link-color-hover:   $base-link-color;
+
+$menu-secondary-background-color: $nav-background-color;
+$menu-secondary-border-color:     $base-border-color;
+$menu-secondary-link-color:       lighten($nav-link-color, 10);
+$menu-secondary-link-color-hover: $base-link-color;
 
 // Mobile Menu Colors
 //------------------------------------------------------------------------------
