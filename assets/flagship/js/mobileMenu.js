@@ -157,6 +157,8 @@
 				$firstItem = $items.first(),
 				$lastItem  = $items.last();
 
+			$mobileMenu.focus();
+
 			$mobileMenu.on( 'keydown', function( e ) {
 				// Return early if we're not using the tab key.
 				if ( 9 !== e.keyCode ) {
