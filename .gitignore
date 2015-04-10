@@ -19,7 +19,7 @@ assets/bower/
 assets/composer/
 
 # Generated theme files
-/assets/flagship/scss/generated/
+/assets/theme/scss/generated/
 /css/
 /fonts/
 /includes/vendor/
