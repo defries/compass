@@ -6,11 +6,9 @@
  * @subpackage  HybridCore
  * @copyright   Copyright (c) 2015, Flagship Software, LLC
  * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
  * @since       1.0.0
  */
 ?>
-
 <div <?php hybrid_attr( 'loop-meta' ); ?>>
 
 	<div <?php hybrid_attr( 'wrap', 'loop-meta' ); ?>>

@@ -6,11 +6,9 @@
  * @subpackage  HybridCore
  * @copyright   Copyright (c) 2015, Flagship Software, LLC
  * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
  * @since       1.0.0
  */
 ?>
-
 <?php if ( ! in_array( get_theme_mod( 'theme_layout' ), array( '1c', '1c-narrow' ) ) ) : // If not a one-column layout. ?>
 
 	<?php tha_sidebars_before(); ?>

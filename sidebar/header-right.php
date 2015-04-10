@@ -8,7 +8,6 @@
  * @subpackage  HybridCore
  * @copyright   Copyright (c) 2015, Flagship Software, LLC
  * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
  * @since       1.0.0
  */
 add_filter( 'wp_nav_menu_args', 'flagship_widget_menu_args' );
@@ -22,11 +21,8 @@ if ( is_active_sidebar( 'header-right' ) ) : ?>
 
 	</div><!-- .header-right -->
 
-	<?php
+<?php elseif ( current_user_can( 'edit_theme_options' ) ) : ?>
 
-elseif ( current_user_can( 'edit_theme_options' ) ) :
-
-	?>
 	<div <?php hybrid_attr( 'header-right' ); ?>>
 
 		<p class="no-menu">

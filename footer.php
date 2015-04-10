@@ -8,11 +8,9 @@
  * @subpackage  HybridCore
  * @copyright   Copyright (c) 2015, Flagship Software, LLC
  * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
  * @since       1.0.0
  */
 ?>
-
 		<?php tha_footer_before(); ?>
 
 		<footer <?php hybrid_attr( 'footer' ); ?>>

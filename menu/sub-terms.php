@@ -6,11 +6,9 @@
  * @subpackage  HybridCore
  * @copyright   Copyright (c) 2015, Flagship Software, LLC
  * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
  * @since       1.0.0
  */
 ?>
-
 <?php if ( is_taxonomy_hierarchical( get_queried_object()->taxonomy ) ) : ?>
 
 	<?php

@@ -6,11 +6,9 @@
  * @subpackage  HybridCore
  * @copyright   Copyright (c) 2015, Flagship Software, LLC
  * @license     GPL-2.0+
- * @link        https://flagshipwp.com/
  * @since       1.0.0
  */
 ?>
-
 <?php get_header(); ?>
 
 <div <?php hybrid_attr( 'site-inner' ); ?>>
