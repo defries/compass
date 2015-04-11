@@ -26,11 +26,11 @@
 	}
 
 	.next:before {
-		content: $fli-arrow-right;
+		content: $sic-arrow-right;
 	}
 
 	.prev:before {
-		content: $fli-arrow-left;
+		content: $sic-arrow-left;
 	}
 
 	a {
@@ -46,11 +46,11 @@
 
 .rtl {
 	.pagination .next:before {
-		content: $fli-arrow-left;
+		content: $sic-arrow-left;
 	}
 
 	.pagination .prev:before {
-		content: $fli-arrow-right;
+		content: $sic-arrow-right;
 	}
 }
 
@@ -98,7 +98,7 @@
 
 	&:after {
 		font-family: "flagicons";
-		content: $fli-arrow-right;
+		content: $sic-arrow-right;
 		padding-left: 10px;
 	}
 }
@@ -111,7 +111,7 @@
 
 	&:before {
 		font-family: "flagicons";
-		content: $fli-arrow-left;
+		content: $sic-arrow-left;
 		padding-right: 10px;
 	}
 }

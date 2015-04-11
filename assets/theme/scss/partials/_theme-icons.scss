@@ -1,5 +1,3 @@
-/* Theme Icons
---------------------------------------------- */
 // Links
 a[href^="mailto:"]::before,
 a[href^="tel:"]::before,
@@ -46,16 +44,16 @@ a[href^="tel:"]::before,
 .comments-number::before,
 
 // Respond
-.comment-reply-title:before,
+.comment-reply-title::before,
 .comment-respond label[for="author"]::before,
 .comment-respond label[for="email"]::before,
 .comment-respond label[for="url"]::before,
 .comment-respond label[for="comment"]::before {
-	@extend %fli;
+	@extend %sic;
 }
 
 /* Theme Icon Padding
----------------------- */
+--------------------------------------------- */
 a[href^="mailto:"]::before,
 a[href^="tel:"]::before,
 .entry-author a::before,
@@ -77,153 +75,153 @@ a[href^="tel:"]::before,
 }
 
 /* Link Icons
----------------------- */
+--------------------------------------------- */
 a[href^="mailto:"]::before {
-	content: $fli-mail;
+	content: $sic-mail;
 }
 
 a[href^="tel:"]::before {
-	content: $fli-iphone;
+	content: $sic-iphone;
 }
 
 /* Menu Icon
----------------------- */
+--------------------------------------------- */
 .menu-button::before {
-	content: $fli-menu;
+	content: $sic-menu;
 }
 
 .menu-button.activated::before {
-	content: $fli-close;
+	content: $sic-close;
 }
 
 /* Search Icon
----------------------- */
+--------------------------------------------- */
 .search-form button::before {
-	content: $fli-search;
+	content: $sic-search;
 }
 
 /* Post Icons
----------------------- */
+--------------------------------------------- */
 .entry-author a::before,
 .chat-author cite::before {
-	content: $fli-person;
+	content: $sic-person;
 }
 
 .entry-published::before {
-	content: $fli-calendar;
+	content: $sic-calendar;
 }
 
 .entry-comments-link::before {
-	content: $fli-chat;
+	content: $sic-chat;
 }
 
 .post-edit-link::before {
-	content: $fli-edit;
+	content: $sic-edit;
 }
 
 .entry-permalink::before {
-	content: $fli-link;
+	content: $sic-link;
 }
 
 .entry-terms.post_tag::before {
-	content: $fli-tag;
+	content: $sic-tag;
 }
 
 .entry-terms.category::before {
-	content: $fli-folder;
+	content: $sic-folder;
 }
 
 .entry-terms.portfolio::before {
-	content: $fli-camera;
+	content: $sic-camera;
 }
 
 .format-standard .post-format-link::before {
-	content: $fli-book;
+	content: $sic-book;
 }
 
 .format-aside .post-format-link::before {
-	content: $fli-aside;
+	content: $sic-aside;
 }
 
 .format-audio .post-format-link::before {
-	content: $fli-audio;
+	content: $sic-audio;
 }
 
 .format-chat .post-format-link::before {
-	content: $fli-chat;
+	content: $sic-chat;
 }
 
 .format-gallery .post-format-link::before {
-	content: $fli-gallery;
+	content: $sic-gallery;
 }
 
 .image-sizes::before,
 .format-image .post-format-link::before {
-	content: $fli-image;
+	content: $sic-image;
 }
 
 .format-link .post-format-link::before {
-	content: $fli-link;
+	content: $sic-link;
 }
 
 .format-quote .post-format-link::before {
-	content: $fli-quote;
+	content: $sic-quote;
 }
 
 .format-status .post-format-link::before {
-	content: $fli-status;
+	content: $sic-status;
 }
 
 .format-video .post-format-link::before {
-	content: $fli-video;
+	content: $sic-video;
 }
 
 /* Author Box Icons
----------------------- */
+--------------------------------------------- */
 .social-gplus a::before {
-	content: $fli-googleplus;
+	content: $sic-googleplus;
 }
 
 .social-twitter a::before {
-	content: $fli-twitter;
+	content: $sic-twitter;
 }
 
 .social-facebook a::before {
-	content: $fli-facebook;
+	content: $sic-facebook;
 }
 
 .social-rss a::before {
-	content: $fli-feed;
+	content: $sic-feed;
 }
 
 /* Comment Entry Icons
----------------------- */
+--------------------------------------------- */
 .comment-published::before {
-	content: $fli-time;
+	content: $sic-time;
 }
 
 .comment-author::before {
-	content: $fli-person;
+	content: $sic-person;
 }
 
 .ping .comment-author::before {
-	content: $fli-link;
+	content: $sic-link;
 }
 
 .comment-edit-link::before {
-	content: $fli-edit;
+	content: $sic-edit;
 }
 
 /* Comment Reply Icons
----------------------- */
+--------------------------------------------- */
 .comment-reply-title::before {
-	content: $fli-reply;
+	content: $sic-reply;
 	padding: 0 3px 1px 0;
 }
 
 .comment-reply-link::before,
 .comment-reply-login::before {
-	content: $fli-reply;
+	content: $sic-reply;
 	margin-bottom: 3px;
 	padding-right: 5px;
 }
@@ -238,36 +236,36 @@ a[href^="tel:"]::before {
 }
 
 .comment-respond label[for="author"]::before {
-	content: $fli-person;
+	content: $sic-person;
 }
 
 .comment-respond label[for="email"]::before {
-	content: $fli-mail;
+	content: $sic-mail;
 }
 
 .comment-respond label[for="url"]::before {
-	content: $fli-link;
+	content: $sic-link;
 }
 
 .comment-respond label[for="comment"]::before {
-	content: $fli-chat;
+	content: $sic-chat;
 }
 
 /* Media Info Toggle Icon
----------------------- */
+--------------------------------------------- */
 .media-info-toggle::after {
-	content: $fli-chevron-down;
+	content: $sic-chevron-down;
 	color: $media-info-toggle-color;
 	padding-left: 5px;
 	vertical-align: top;
 }
 
 .media-info-toggle.active::after {
-	content: $fli-chevron-up;
+	content: $sic-chevron-up;
 }
 
 /* Media Player Icons
----------------------- */
+--------------------------------------------- */
 .mejs-button button::after {
 	color: $media-player-button-color;
 }
@@ -277,17 +275,17 @@ a[href^="tel:"]::before {
 }
 
 .mejs-fullscreen-button button::after {
-	content: $fli-plus;
+	content: $sic-plus;
 }
 
 .mejs-play button::after {
-	content: $fli-play;
+	content: $sic-play;
 }
 
 .mejs-pause button::after {
-	content: $fli-pause;
+	content: $sic-pause;
 }
 
 .mejs-volume-button button::after {
-	content: $fli-volume-on;
+	content: $sic-volume-on;
 }
