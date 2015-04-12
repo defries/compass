@@ -1,5 +1,25 @@
 # Changelog for Compass
 
+## 2.0.0
+
+This is a fairly massive overhaul of Compass. There are breaking changes, so please be aware if you're planning on upgrading an older Compass-based theme. The most noticeable change is the fact that we've gotten rid of the tiered directory structure in favor of a more standard flat directory structure. This was done primarily to make child theming and deploying easier.
+
+Because so much has changed in this version. I'm not going to point everything out in the release, but the following is a list of all major changes since the last version. For a full breakdown, read the [commit history](https://github.com/FlagshipWP/compass/commits/master).
+
+- Abstracted all Grunt dependencies into a separate [config](https://github.com/FlagshipWP/flagship-wp-theme-config) and [loader](https://github.com/FlagshipWP/load-flagship-grunt-config)
+- Changed to Node Sass, Node Bourbon, and Node Neat
+- Moved footer widgets and author box templates to the [Flagship Library](https://github.com/FlagshipWP/flagship-library)
+- Added support for some new features within the Flagship Library
+- Added support for new features in WordPress 4.1 and Hybrid Core 2.1
+- Added a custom icon font based on [Themicons](https://github.com/cedaro/themicons) which can be modified by adding SVG files to the /icons/ directory
+- Added the [Cedaro Skip Link Focus](https://github.com/cedaro/skip-link-focus) script for cross-browser a11y skip links
+- Removed Genericons
+- Removed Sidr and replaced with a custom mobile menu script
+- Made extensive improvements to mobile styling and moved to REM font sizes
+- Improved and modernized comment styling
+- Added additional Sass variables and improved Sass partial segmentation
+- Various coding standards and general code improvements
+
 ## 1.1.0
 
 Not a whole lot has changed feature-wise in this release, but a number of improvements have been made under the hood. In addition to the master and develop branches, we're now also maintaining a [node-sass branch](https://github.com/FlagshipWP/compass/tree/node-sass) which compiles faster than the Ruby Sass version.
