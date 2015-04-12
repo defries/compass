@@ -6,8 +6,7 @@
   "license": "GPL-2.0+",
   "private": true,
   "bugs": {
-    "url": "https://flagshipwp.com/support",
-    "email": "support@flagshipwp.com"
+    "url": "https://github.com/FlagshipWP/compass/issues"
   },
   "contributors": [
     {
@@ -25,7 +24,7 @@
   ],
   "theme": {
     "name": "Compass",
-    "uri": "https://flagshipwp.com/compass/",
+    "uri": "https://github.com/FlagshipWP/compass",
     "description": "The most advanced WordPress Starter theme ever created. Built with Hybrid Core, Theme Hook Alliance, Bourbon, and Neat.",
     "author": "Flagship",
     "authoruri": "https://flagshipwp.com",
