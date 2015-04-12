@@ -22,7 +22,7 @@
 
 	.next:before,
 	.prev:before {
-		font-family: "flagicons";
+		font-family: "siteicons";
 	}
 
 	.next:before {
@@ -97,7 +97,7 @@
 	}
 
 	&:after {
-		font-family: "flagicons";
+		font-family: "siteicons";
 		content: $sic-arrow-right;
 		padding-left: 10px;
 	}
@@ -110,7 +110,7 @@
 	}
 
 	&:before {
-		font-family: "flagicons";
+		font-family: "siteicons";
 		content: $sic-arrow-left;
 		padding-right: 10px;
 	}
