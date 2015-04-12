@@ -22,12 +22,11 @@
 				<p class="credit">
 					<?php
 					printf(
-						// Translators: 1 is current year, 2 is site name/link, 3 is WordPress name/link, and 4 is theme developer.
-						__( 'Copyright &#169; %1$s %2$s. Built on the %3$s starter theme by %4$s.', 'compass' ),
+						// Translators: 1 is current year, 2 is site name/link, 3 is WordPress name/link.
+						__( 'Copyright &#169; %1$s %2$s. Powered by %3$s.', 'compass' ),
 						date_i18n( 'Y' ),
 						hybrid_get_site_link(),
-						flagship_get_theme_link(),
-						flagship_get_credit_link()
+						hybrid_get_wp_link()
 					);
 					?>
 				</p><!-- .credit -->
