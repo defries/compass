@@ -1,15 +1,13 @@
 {
   "name": "compass",
-  "version": "1.0.0",
+  "version": "2.0.0-beta",
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "bourbon": "~4.0.2",
-    "neat": "~1.7.0",
-    "genericons": "Automattic/Genericons#master",
-    "normalize.css": "~3.0.1",
-    "fitvids": "~1.1.0",
+    "wp-normalize.scss": "~1.0",
+    "fitvids": "~1.1",
     "accessible-menu": "GaryJones/accessible-menu#master",
-    "sidr": "~1.2.1"
+    "themicons": "cedaro/themicons#develop",
+    "skip-link-focus": "~0.1.0"
   }
 }

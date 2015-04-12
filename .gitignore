@@ -19,12 +19,13 @@ assets/bower/
 assets/composer/
 
 # Generated theme files
-/theme/css
-/theme/font
-/theme/includes/vendor
-/theme/hybrid-core
-/theme/images
-/theme/js
-/theme/languages
-/theme/style*.*
-/theme/screenshot.png
+/assets/theme/scss/generated/
+/css/
+/fonts/
+/includes/vendor/
+/hybrid-core/
+/images/
+/js/
+/languages/
+/style*.*
+/screenshot.png
