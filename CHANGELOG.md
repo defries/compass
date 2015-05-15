@@ -1,5 +1,9 @@
 # Changelog for Compass
 
+## 2.0.1
+
+Updated to the latest version of Themicons and fixed generated Sass variable names.
+
 ## 2.0.0
 
 This is a fairly massive overhaul of Compass. There are breaking changes, so please be aware if you're planning on upgrading an older Compass-based theme. The most noticeable change is the fact that we've gotten rid of the tiered directory structure in favor of a more standard flat directory structure. This was done primarily to make child theming and deploying easier.
