@@ -112,7 +112,7 @@ a[href^="tel:"]::before {
 }
 
 .entry-comments-link::before {
-	content: $sic-chat;
+	content: $sic-format-chat;
 }
 
 .post-edit-link::before {
@@ -128,7 +128,7 @@ a[href^="tel:"]::before {
 }
 
 .entry-terms.category::before {
-	content: $sic-folder;
+	content: $sic-category;
 }
 
 .entry-terms.portfolio::before {
@@ -140,40 +140,40 @@ a[href^="tel:"]::before {
 }
 
 .format-aside .post-format-link::before {
-	content: $sic-aside;
+	content: $sic-format-aside;
 }
 
 .format-audio .post-format-link::before {
-	content: $sic-audio;
+	content: $sic-format-audio;
 }
 
 .format-chat .post-format-link::before {
-	content: $sic-chat;
+	content: $sic-format-chat;
 }
 
 .format-gallery .post-format-link::before {
-	content: $sic-gallery;
+	content: $sic-format-gallery;
 }
 
 .image-sizes::before,
 .format-image .post-format-link::before {
-	content: $sic-image;
+	content: $sic-format-image;
 }
 
 .format-link .post-format-link::before {
-	content: $sic-link;
+	content: $sic-format-link;
 }
 
 .format-quote .post-format-link::before {
-	content: $sic-quote;
+	content: $sic-format-quote;
 }
 
 .format-status .post-format-link::before {
-	content: $sic-status;
+	content: $sic-format-status;
 }
 
 .format-video .post-format-link::before {
-	content: $sic-video;
+	content: $sic-format-video;
 }
 
 /* Author Box Icons
@@ -244,11 +244,11 @@ a[href^="tel:"]::before {
 }
 
 .comment-respond label[for="url"]::before {
-	content: $sic-link;
+	content: $sic-format-link;
 }
 
 .comment-respond label[for="comment"]::before {
-	content: $sic-chat;
+	content: $sic-format-chat;
 }
 
 /* Media Info Toggle Icon
