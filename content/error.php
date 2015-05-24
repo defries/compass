@@ -1,6 +1,6 @@
 <?php
 /**
- * A template to display when no contet can be found.
+ * A template to display when no content can be found.
  *
  * @package     Compass
  * @subpackage  HybridCore
